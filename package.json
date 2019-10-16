@@ -27,6 +27,7 @@
     "prepublishOnly": "npm run build",
     "prebuild": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
     "build": "tsc",
+    "build:doc": "jsdoc2md --files ./src/**/*.ts --configure ./jsdoc2md.json > ./api.md",
     "test": "jest",
     "coverage": "jest --coverage",
     "watch": "npm run build -- --watch",
@@ -37,11 +38,16 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-typescript": "^7.6.0",
     "@mendix/pluggable-widgets-tools": "^8.2.0",
     "@types/jest": "^23.3.3",
-    "@types/node": "^10.11.4",
     "coveralls": "^3.0.2",
     "jest": "^23.6.0",
+    "jsdoc-babel": "^0.5.0",
+    "jsdoc-to-markdown": "^5.0.2",
     "mendix-client": "^7.15.8",
     "prettier": "^1.14.3",
     "rimraf": "^2.6.2",
@@ -49,7 +55,7 @@
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
-    "typescript": "^3.1.1"
+    "typescript": "^3.6.4"
   },
   "engines": {
     "node": ">=10.0.0"
