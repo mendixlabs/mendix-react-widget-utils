@@ -1,13 +1,13 @@
 {
   "name": "@jeltemx/mendix-react-widget-utils",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Mendix Widget utils to make widget development a little easier",
   "license": "MIT",
   "repository": "",
   "author": {
     "name": "Jelte Lagendijk",
     "email": "jelte.lagendijk@mendix.com",
-    "url": ""
+    "url": "https://github.com/JelteMX/mendix-react-widget-utils"
   },
   "keywords": [
     "mendix",
