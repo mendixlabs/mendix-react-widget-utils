@@ -1,4 +1,5 @@
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/%40jeltemx%2Fmendix-react-widget-utils.svg)](https://badge.fury.io/js/%40jeltemx%2Fmendix-react-widget-utils)
 
 # Mendix (React) Widget Utils
 
