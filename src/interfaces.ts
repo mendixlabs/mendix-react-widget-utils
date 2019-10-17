@@ -1,7 +1,7 @@
-import { CSSProperties } from 'react';
+import { CSSProperties } from "react";
 
-export type ActionType = 'microflow' | 'nanoflow' | 'open page';
-export type OpenPageAs = 'content' | 'popup' | 'modal' | 'node';
+export type ActionType = "microflow" | "nanoflow" | "open page";
+export type OpenPageAs = "content" | "popup" | "modal" | "node";
 
 /**
  * Common properties that are set by the Mendix Runtime in React widgets

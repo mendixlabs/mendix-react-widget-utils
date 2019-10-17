@@ -55,8 +55,8 @@ export const getObject = (guid: string): Promise<mendix.lib.MxObject | null> =>
  */
 export const fetchAttr = (obj: mendix.lib.MxObject, attr: string): Promise<any> =>
     new Promise((resolve, reject) => {
-        if (attr === '') {
-            reject(new Error('Attribute to fetch cannot be empty!'));
+        if (attr === "") {
+            reject(new Error("Attribute to fetch cannot be empty!"));
         } else if (!obj.has(attr)) {
             reject(new Error(`Attribute '${attr}' does not exist on object of type ${obj.getEntity()}`));
         } else {

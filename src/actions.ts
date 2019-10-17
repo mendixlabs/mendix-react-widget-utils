@@ -1,4 +1,4 @@
-import { ActionType, INanoflow, IOpenPageAction } from './interfaces';
+import { ActionType, INanoflow, IOpenPageAction } from "./interfaces";
 
 const showMendixActionError = (show = false, type: ActionType, actionName: any, msg: string) => {
     if (!show) {
@@ -22,15 +22,15 @@ export const executeMicroflow = (
     showError = false
 ): Promise<string | number | boolean | mendix.lib.MxObject | mendix.lib.MxObject[]> =>
     new Promise((resolve, reject) => {
-        if (!microflow || microflow === '') {
-            return reject(new Error('Microflow parameter cannot be empty!'));
+        if (!microflow || microflow === "") {
+            return reject(new Error("Microflow parameter cannot be empty!"));
         }
         try {
             window.mx.data.action({
                 callback: resolve,
                 context,
                 error: error => {
-                    showMendixActionError(showError, 'microflow', microflow, error.message);
+                    showMendixActionError(showError, "microflow", microflow, error.message);
                     reject(error);
                 },
                 origin,
@@ -39,10 +39,11 @@ export const executeMicroflow = (
                 },
             });
         } catch (e) {
-            showMendixActionError(showError, 'microflow', microflow, e.message);
+            showMendixActionError(showError, "microflow", microflow, e.message);
             reject(e);
         }
     });
+
 /**
  * Execute a Nanoflow as Promise
  *
@@ -63,17 +64,18 @@ export const executeNanoFlow = (
                 callback: resolve,
                 context,
                 error: error => {
-                    showMendixActionError(showError, 'nanoflow', nanoflow, error.message);
+                    showMendixActionError(showError, "nanoflow", nanoflow, error.message);
                     reject(error);
                 },
-                origin,
                 nanoflow,
+                origin,
             });
         } catch (error) {
-            showMendixActionError(showError, 'nanoflow', nanoflow, error.message);
+            showMendixActionError(showError, "nanoflow", nanoflow, error.message);
             reject(error);
         }
     });
+
 /**
  * Open a page
  *
@@ -87,7 +89,7 @@ export const openPage = (
     showError = false
 ): Promise<void> => {
     if (!pageAction.pageName) {
-        return Promise.reject(new Error('Page name not provided!'));
+        return Promise.reject(new Error("Page name not provided!"));
     }
     return new Promise((resolve, reject) => {
         window.mx.ui.openForm(pageAction.pageName, {
@@ -96,10 +98,10 @@ export const openPage = (
             },
             context,
             error: error => {
-                showMendixActionError(showError, 'open page', pageAction.pageName, error.message);
+                showMendixActionError(showError, "open page", pageAction.pageName, error.message);
                 reject(error);
             },
-            location: pageAction.openAs || 'popup',
+            location: pageAction.openAs || "popup",
         });
     });
 };

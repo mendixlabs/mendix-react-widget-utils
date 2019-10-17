@@ -1,13 +1,14 @@
-import { Component } from 'react';
-import { executeMicroflow, executeNanoFlow, openPage } from './actions';
-import { getObjectContext } from './objects';
-import { IAction, ICommonWidgetProps } from './interfaces';
+import { Component } from "react";
+import { executeMicroflow, executeNanoFlow, openPage } from "./actions";
+import { getObjectContext } from "./objects";
+import { IAction, ICommonWidgetProps } from "./interfaces";
 
 /**
  * Widget base with convenient methods for building widgets fast
  */
 export class WidgetBase extends Component<ICommonWidgetProps, {}> {
     public widgetId?: string;
+
     /**
      * Get a new context, used for actions
      *
@@ -22,6 +23,7 @@ export class WidgetBase extends Component<ICommonWidgetProps, {}> {
 
         return new window.mendix.lib.MxContext();
     }
+
     /**
      * Execute an Action as a Promise
      *
@@ -34,7 +36,7 @@ export class WidgetBase extends Component<ICommonWidgetProps, {}> {
         showError = false,
         obj?: mendix.lib.MxObject
     ): Promise<string | number | boolean | mendix.lib.MxObject | mendix.lib.MxObject[] | void> {
-        this.debug('executeAction', action, obj && obj.getGuid());
+        this.debug("executeAction", action, obj && obj.getGuid());
         const { mxform } = this.props;
         const context = this.getContext(obj);
 
