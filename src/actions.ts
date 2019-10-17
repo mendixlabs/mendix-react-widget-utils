@@ -10,6 +10,8 @@ const showMendixActionError = (show = false, type: ActionType, actionName: any, 
 /**
  * Execute a microflow as Promise
  *
+ * @name executeMicroflow
+ * @category Actions
  * @param microflow Microflow name
  * @param context Context in which the microflow is ececuted. This is populated by the Mendix Object that is passed down to the microflow
  * @param origin The mxform that is part of the widget that executes the microflow
@@ -47,6 +49,8 @@ export const executeMicroflow = (
 /**
  * Execute a Nanoflow as Promise
  *
+ * @name executeNanoFlow
+ * @category Actions
  * @param nanoflow Nanoflow
  * @param context Context in which the microflow is ececuted. This is populated by the Mendix Object that is passed down to the microflow
  * @param origin The mxform that is part of the widget that executes the microflow
@@ -79,6 +83,8 @@ export const executeNanoFlow = (
 /**
  * Open a page
  *
+ * @name openPage
+ * @category Actions
  * @param pageAction Page action containing the `pageName` and optional `openAs`
  * @param context Context that is provided to the page. This is tied to an object
  * @param showError Show a Mendix error or not

@@ -1,6 +1,8 @@
 /**
  * Create a Mendix Object
  *
+ * @name createObject
+ * @category Objects
  * @param entity Entity type for the created object
  */
 export const createObject = (entity: string): Promise<mendix.lib.MxObject> =>
@@ -11,6 +13,8 @@ export const createObject = (entity: string): Promise<mendix.lib.MxObject> =>
 /**
  * Commit a Mendix Object
  *
+ * @name commitObject
+ * @category Objects
  * @param mxobj Mendix Object that will be committed to the server
  */
 export const commitObject = (mxobj: mendix.lib.MxObject): Promise<void> =>
@@ -21,6 +25,8 @@ export const commitObject = (mxobj: mendix.lib.MxObject): Promise<void> =>
 /**
  * Delete a Mendix Object based on Guid
  *
+ * @name deleteObjectGuid
+ * @category Objects
  * @param guid Object guid of the deleted object
  */
 export const deleteObjectGuid = (guid: string): Promise<void> =>
@@ -31,6 +37,8 @@ export const deleteObjectGuid = (guid: string): Promise<void> =>
 /**
  * Delete a Mendix Object
  *
+ * @name deleteObject
+ * @category Objects
  * @param obj Mendix Object
  */
 export const deleteObject = (obj: mendix.lib.MxObject): Promise<void> => {
@@ -40,6 +48,8 @@ export const deleteObject = (obj: mendix.lib.MxObject): Promise<void> => {
 /**
  * Get a Mendix Object
  *
+ * @name getObject
+ * @category Objects
  * @param guid Object guid of the Mendix Object that you try to return
  */
 export const getObject = (guid: string): Promise<mendix.lib.MxObject | null> =>
@@ -50,6 +60,8 @@ export const getObject = (guid: string): Promise<mendix.lib.MxObject | null> =>
 /**
  * Fetch an attribute from a Mendix Object
  *
+ * @name fetchAttr
+ * @category Objects
  * @param obj Mendix Object
  * @param attr Attribute
  */
@@ -71,6 +83,8 @@ export const fetchAttr = (obj: mendix.lib.MxObject, attr: string): Promise<any> 
 /**
  * Get context for a Mendix Object, used in actions
  *
+ * @name getObjectContext
+ * @category Objects
  * @param obj Mendix Object
  */
 export const getObjectContext = (obj: mendix.lib.MxObject): mendix.lib.MxContext => {
