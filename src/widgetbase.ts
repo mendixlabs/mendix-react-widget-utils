@@ -5,6 +5,8 @@ import { IAction, ICommonWidgetProps } from "./interfaces";
 
 /**
  * Widget base with convenient methods for building widgets fast
+ *
+ * @class WidgetBase
  */
 export class WidgetBase extends Component<ICommonWidgetProps, {}> {
     public widgetId?: string;
@@ -13,6 +15,7 @@ export class WidgetBase extends Component<ICommonWidgetProps, {}> {
      * Get a new context, used for actions
      *
      * @name getContext
+     * @memberof WidgetBase
      * @param obj Mendix Object (optional)
      */
     public getContext(obj?: mendix.lib.MxObject): mendix.lib.MxContext {
@@ -29,6 +32,7 @@ export class WidgetBase extends Component<ICommonWidgetProps, {}> {
      * Execute an Action as a Promise
      *
      * @name executeAction
+     * @memberof WidgetBase
      * @param action Action contains a microflow/nanoflow/page
      * @param showError When an error occurs in the executed action, show it using `mx.ui.error`
      * @param obj Optional: Mendix object. If this is omitted, it will assume to use the context object of the widget
@@ -59,6 +63,7 @@ export class WidgetBase extends Component<ICommonWidgetProps, {}> {
      * Log messages in your widget for debugging. Uses the Mendix logger (set to loglevel.DEBUG)
      *
      * @name debug
+     * @memberof WidgetBase
      * @param args Arguments to pass down the Mendix Logger
      */
     public debug(...args: any): void {

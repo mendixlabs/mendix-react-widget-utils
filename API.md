@@ -2,18 +2,12 @@
 
 <dl>
 <dt><a href="#WidgetBase">WidgetBase</a></dt>
-<dd><p>Widget base with convenient methods for building widgets fast</p></dd>
+<dd></dd>
 </dl>
 
 ## Members
 
 <dl>
-<dt><a href="#getContext">getContext</a></dt>
-<dd><p>Get a new context, used for actions</p></dd>
-<dt><a href="#executeAction">executeAction</a></dt>
-<dd><p>Execute an Action as a Promise</p></dd>
-<dt><a href="#debug">debug</a></dt>
-<dd><p>Log messages in your widget for debugging. Uses the Mendix logger (set to loglevel.DEBUG)</p></dd>
 <dt><a href="#executeMicroflow">executeMicroflow</a></dt>
 <dd><p>Execute a microflow as Promise</p></dd>
 <dt><a href="#executeNanoFlow">executeNanoFlow</a></dt>
@@ -39,26 +33,36 @@
 <a name="WidgetBase"></a>
 
 ## WidgetBase
+**Kind**: global class  
+
+* [WidgetBase](#WidgetBase)
+    * [new WidgetBase()](#new_WidgetBase_new)
+    * [.getContext](#WidgetBase.getContext)
+    * [.executeAction](#WidgetBase.executeAction)
+    * [.debug](#WidgetBase.debug)
+
+<a name="new_WidgetBase_new"></a>
+
+### new WidgetBase()
 <p>Widget base with convenient methods for building widgets fast</p>
 
-**Kind**: global class  
-<a name="getContext"></a>
+<a name="WidgetBase.getContext"></a>
 
-## getContext
+### WidgetBase.getContext
 <p>Get a new context, used for actions</p>
 
-**Kind**: global variable  
+**Kind**: static property of [<code>WidgetBase</code>](#WidgetBase)  
 
 | Param | Description |
 | --- | --- |
 | obj | <p>Mendix Object (optional)</p> |
 
-<a name="executeAction"></a>
+<a name="WidgetBase.executeAction"></a>
 
-## executeAction
+### WidgetBase.executeAction
 <p>Execute an Action as a Promise</p>
 
-**Kind**: global variable  
+**Kind**: static property of [<code>WidgetBase</code>](#WidgetBase)  
 
 | Param | Description |
 | --- | --- |
@@ -66,12 +70,12 @@
 | showError | <p>When an error occurs in the executed action, show it using <code>mx.ui.error</code></p> |
 | obj | <p>Optional: Mendix object. If this is omitted, it will assume to use the context object of the widget</p> |
 
-<a name="debug"></a>
+<a name="WidgetBase.debug"></a>
 
-## debug
+### WidgetBase.debug
 <p>Log messages in your widget for debugging. Uses the Mendix logger (set to loglevel.DEBUG)</p>
 
-**Kind**: global variable  
+**Kind**: static property of [<code>WidgetBase</code>](#WidgetBase)  
 
 | Param | Description |
 | --- | --- |
