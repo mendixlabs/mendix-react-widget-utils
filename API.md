@@ -8,6 +8,10 @@
 ## Members
 
 <dl>
+<dt><a href="#openPage">openPage</a></dt>
+<dd><p>Execute an action</p></dd>
+<dt><a href="#getObjectContext">getObjectContext</a></dt>
+<dd><p>Fetch Mendix objects over an XPath</p></dd>
 <dt><a href="#executeMicroflow">executeMicroflow</a></dt>
 <dd><p>Execute a microflow as Promise</p></dd>
 <dt><a href="#executeNanoFlow">executeNanoFlow</a></dt>
@@ -30,6 +34,13 @@
 <dd><p>Get context for a Mendix Object, used in actions</p></dd>
 </dl>
 
+## Functions
+
+<dl>
+<dt><a href="#debug">debug(id)</a></dt>
+<dd><p>Mendix debugger console</p></dd>
+</dl>
+
 <a name="WidgetBase"></a>
 
 ## WidgetBase
@@ -38,7 +49,6 @@
 * [WidgetBase](#WidgetBase)
     * [new WidgetBase()](#new_WidgetBase_new)
     * [.getContext](#WidgetBase.getContext)
-    * [.executeAction](#WidgetBase.executeAction)
     * [.debug](#WidgetBase.debug)
 
 <a name="new_WidgetBase_new"></a>
@@ -57,19 +67,6 @@
 | --- | --- |
 | obj | <p>Mendix Object (optional)</p> |
 
-<a name="WidgetBase.executeAction"></a>
-
-### WidgetBase.executeAction
-<p>Execute an Action as a Promise</p>
-
-**Kind**: static property of [<code>WidgetBase</code>](#WidgetBase)  
-
-| Param | Description |
-| --- | --- |
-| action | <p>Action contains a microflow/nanoflow/page</p> |
-| showError | <p>When an error occurs in the executed action, show it using <code>mx.ui.error</code></p> |
-| obj | <p>Optional: Mendix object. If this is omitted, it will assume to use the context object of the widget</p> |
-
 <a name="WidgetBase.debug"></a>
 
 ### WidgetBase.debug
@@ -80,6 +77,44 @@
 | Param | Description |
 | --- | --- |
 | args | <p>Arguments to pass down the Mendix Logger</p> |
+
+<a name="openPage"></a>
+
+## openPage
+<p>Execute an action</p>
+
+**Kind**: global variable  
+
+| Param | Description |
+| --- | --- |
+| action | <p>Action object</p> |
+| showError | <p>Show error in ui or not</p> |
+| context | <p>Context for the action</p> |
+| mxform | <p>Form coming from the widget</p> |
+
+<a name="getObjectContext"></a>
+
+## getObjectContext
+<p>Fetch Mendix objects over an XPath</p>
+
+**Kind**: global variable  
+
+| Param | Description |
+| --- | --- |
+| contextObject | <p>Mendix Object</p> |
+| entityName | <p>Entity name for the xpath (//EntityName[Constraint])</p> |
+| constraint | <p>Constraint</p> |
+
+<a name="debug"></a>
+
+## debug(id)
+<p>Mendix debugger console</p>
+
+**Kind**: global function  
+
+| Param | Description |
+| --- | --- |
+| id | <p>ID for the debugger, coming from the widget (const id = this.props.friendlyId || this.widgetId;)</p> |
 
 <a name="executeMicroflow"></a>
 

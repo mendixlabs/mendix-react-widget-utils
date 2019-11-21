@@ -1,4 +1,4 @@
-import { ActionType, INanoflow, IOpenPageAction } from "./interfaces";
+import { ActionType, INanoflow, IOpenPageAction, IAction, ActionReturnType } from "./interfaces";
 
 const showMendixActionError = (show = false, type: ActionType, actionName: any, msg: string) => {
     if (!show) {
@@ -22,7 +22,7 @@ export const executeMicroflow = (
     context: mendix.lib.MxContext,
     origin: mxui.lib.form._FormBase,
     showError = false
-): Promise<string | number | boolean | mendix.lib.MxObject | mendix.lib.MxObject[]> =>
+): Promise<ActionReturnType> =>
     new Promise((resolve, reject) => {
         if (!microflow || microflow === "") {
             return reject(new Error("Microflow parameter cannot be empty!"));
@@ -61,8 +61,8 @@ export const executeNanoFlow = (
     context: mendix.lib.MxContext,
     origin: mxui.lib.form._FormBase,
     showError = false
-): Promise<string | number | boolean | mendix.lib.MxObject | mendix.lib.MxObject[]> =>
-    new Promise((resolve, reject) => {
+): Promise<ActionReturnType> => {
+    return new Promise((resolve, reject) => {
         try {
             window.mx.data.callNanoflow({
                 callback: resolve,
@@ -79,6 +79,7 @@ export const executeNanoFlow = (
             reject(error);
         }
     });
+};
 
 /**
  * Open a page
@@ -110,4 +111,29 @@ export const openPage = (
             location: pageAction.openAs || "popup",
         });
     });
+};
+
+/**
+ * Execute an action
+ *
+ * @param action Action object
+ * @param showError Show error in ui or not
+ * @param context Context for the action
+ * @param mxform Form coming from the widget
+ */
+export const executeAction = (
+    action: IAction,
+    showError = false,
+    context: mendix.lib.MxContext,
+    mxform: mxui.lib.form._FormBase
+): Promise<string | number | boolean | mendix.lib.MxObject | mendix.lib.MxObject[] | void> => {
+    if (action.microflow) {
+        return executeMicroflow(action.microflow, context, mxform, showError);
+    } else if (action.nanoflow) {
+        return executeNanoFlow(action.nanoflow, context, mxform, showError);
+    } else if (action.page) {
+        return openPage(action.page, context, showError);
+    }
+
+    return Promise.reject(new Error(`No microflow/nanoflow/page defined for this action: ${JSON.stringify(action)}`));
 };

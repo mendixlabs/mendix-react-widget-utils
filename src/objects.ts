@@ -65,7 +65,7 @@ export const getObject = (guid: string): Promise<mendix.lib.MxObject | null> =>
  * @param obj Mendix Object
  * @param attr Attribute
  */
-export const fetchAttr = (obj: mendix.lib.MxObject, attr: string): Promise<any> =>
+export const fetchAttr = <T>(obj: mendix.lib.MxObject, attr: string): Promise<T> =>
     new Promise((resolve, reject) => {
         if (attr === "") {
             reject(new Error("Attribute to fetch cannot be empty!"));
@@ -91,4 +91,34 @@ export const getObjectContext = (obj: mendix.lib.MxObject): mendix.lib.MxContext
     const context = new mendix.lib.MxContext();
     context.setContext(obj.getEntity(), obj.getGuid());
     return context;
+};
+
+/**
+ * Fetch Mendix objects over an XPath
+ *
+ * @param contextObject Mendix Object
+ * @param entityName Entity name for the xpath (//EntityName[Constraint])
+ * @param constraint Constraint
+ */
+export const fetchByXpath = (
+    contextObject: mendix.lib.MxObject,
+    entityName: string,
+    constraint: string
+): Promise<mendix.lib.MxObject[] | null> => {
+    return new Promise((resolve, reject) => {
+        const requiresContext = constraint && constraint.indexOf("[%CurrentObject%]") > -1;
+        const contextGuid = contextObject.getGuid();
+
+        if (!contextGuid && requiresContext) {
+            return resolve(null);
+        }
+
+        const entityConstraint = constraint ? constraint.replace(/\[%CurrentObject%]/g, contextGuid) : "";
+
+        window.mx.data.get({
+            callback: res => resolve(res),
+            error: error => reject(error),
+            xpath: `//${entityName}${entityConstraint}`,
+        });
+    });
 };
