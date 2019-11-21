@@ -96,6 +96,8 @@ export const getObjectContext = (obj: mendix.lib.MxObject): mendix.lib.MxContext
 /**
  * Fetch Mendix objects over an XPath
  *
+ * @name fetchByXPath
+ * @category Objects
  * @param contextObject Mendix Object
  * @param entityName Entity name for the xpath (//EntityName[Constraint])
  * @param constraint Constraint

@@ -8,16 +8,16 @@
 ## Members
 
 <dl>
-<dt><a href="#openPage">openPage</a></dt>
-<dd><p>Execute an action</p></dd>
-<dt><a href="#getObjectContext">getObjectContext</a></dt>
-<dd><p>Fetch Mendix objects over an XPath</p></dd>
+<dt><a href="#debug">debug</a></dt>
+<dd><p>Mendix debugger console</p></dd>
 <dt><a href="#executeMicroflow">executeMicroflow</a></dt>
 <dd><p>Execute a microflow as Promise</p></dd>
 <dt><a href="#executeNanoFlow">executeNanoFlow</a></dt>
 <dd><p>Execute a Nanoflow as Promise</p></dd>
 <dt><a href="#openPage">openPage</a></dt>
 <dd><p>Open a page</p></dd>
+<dt><a href="#executeAction">executeAction</a></dt>
+<dd><p>Execute an action</p></dd>
 <dt><a href="#createObject">createObject</a></dt>
 <dd><p>Create a Mendix Object</p></dd>
 <dt><a href="#commitObject">commitObject</a></dt>
@@ -32,13 +32,8 @@
 <dd><p>Fetch an attribute from a Mendix Object</p></dd>
 <dt><a href="#getObjectContext">getObjectContext</a></dt>
 <dd><p>Get context for a Mendix Object, used in actions</p></dd>
-</dl>
-
-## Functions
-
-<dl>
-<dt><a href="#debug">debug(id)</a></dt>
-<dd><p>Mendix debugger console</p></dd>
+<dt><a href="#fetchByXPath">fetchByXPath</a></dt>
+<dd><p>Fetch Mendix objects over an XPath</p></dd>
 </dl>
 
 <a name="WidgetBase"></a>
@@ -78,39 +73,12 @@
 | --- | --- |
 | args | <p>Arguments to pass down the Mendix Logger</p> |
 
-<a name="openPage"></a>
-
-## openPage
-<p>Execute an action</p>
-
-**Kind**: global variable  
-
-| Param | Description |
-| --- | --- |
-| action | <p>Action object</p> |
-| showError | <p>Show error in ui or not</p> |
-| context | <p>Context for the action</p> |
-| mxform | <p>Form coming from the widget</p> |
-
-<a name="getObjectContext"></a>
-
-## getObjectContext
-<p>Fetch Mendix objects over an XPath</p>
-
-**Kind**: global variable  
-
-| Param | Description |
-| --- | --- |
-| contextObject | <p>Mendix Object</p> |
-| entityName | <p>Entity name for the xpath (//EntityName[Constraint])</p> |
-| constraint | <p>Constraint</p> |
-
 <a name="debug"></a>
 
-## debug(id)
+## debug
 <p>Mendix debugger console</p>
 
-**Kind**: global function  
+**Kind**: global variable  
 
 | Param | Description |
 | --- | --- |
@@ -159,6 +127,21 @@
 | pageAction | <p>Page action containing the <code>pageName</code> and optional <code>openAs</code></p> |
 | context | <p>Context that is provided to the page. This is tied to an object</p> |
 | showError | <p>Show a Mendix error or not</p> |
+
+<a name="executeAction"></a>
+
+## executeAction
+<p>Execute an action</p>
+
+**Kind**: global variable  
+**Category**: Actions  
+
+| Param | Description |
+| --- | --- |
+| action | <p>Action object</p> |
+| showError | <p>Show error in ui or not</p> |
+| context | <p>Context for the action</p> |
+| mxform | <p>Form coming from the widget</p> |
 
 <a name="createObject"></a>
 
@@ -244,4 +227,18 @@
 | Param | Description |
 | --- | --- |
 | obj | <p>Mendix Object</p> |
+
+<a name="fetchByXPath"></a>
+
+## fetchByXPath
+<p>Fetch Mendix objects over an XPath</p>
+
+**Kind**: global variable  
+**Category**: Objects  
+
+| Param | Description |
+| --- | --- |
+| contextObject | <p>Mendix Object</p> |
+| entityName | <p>Entity name for the xpath (//EntityName[Constraint])</p> |
+| constraint | <p>Constraint</p> |
 

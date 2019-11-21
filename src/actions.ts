@@ -116,6 +116,8 @@ export const openPage = (
 /**
  * Execute an action
  *
+ * @name executeAction
+ * @category Actions
  * @param action Action object
  * @param showError Show error in ui or not
  * @param context Context for the action
