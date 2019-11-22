@@ -12,6 +12,10 @@
 <dd><p>Save a Mendix file document</p></dd>
 <dt><a href="#entityIsPersistable">entityIsPersistable</a></dt>
 <dd><p>Is Entity persistent or not</p></dd>
+<dt><a href="#entityIsImage">entityIsImage</a></dt>
+<dd><p>Is Entity an instance of a System.Image or not</p></dd>
+<dt><a href="#entityIsFileDocument">entityIsFileDocument</a></dt>
+<dd><p>Is Entity an instance of a System.FileDocument or not</p></dd>
 <dt><a href="#objectIsPersistable">objectIsPersistable</a></dt>
 <dd><p>Return whether or not a Mendix object is persistable or not</p></dd>
 <dt><a href="#executeMicroflow">executeMicroflow</a></dt>
@@ -98,6 +102,28 @@
 
 ## entityIsPersistable
 <p>Is Entity persistent or not</p>
+
+**Kind**: global variable  
+
+| Param | Description |
+| --- | --- |
+| entity | <p>Entity name</p> |
+
+<a name="entityIsImage"></a>
+
+## entityIsImage
+<p>Is Entity an instance of a System.Image or not</p>
+
+**Kind**: global variable  
+
+| Param | Description |
+| --- | --- |
+| entity | <p>Entity name</p> |
+
+<a name="entityIsFileDocument"></a>
+
+## entityIsFileDocument
+<p>Is Entity an instance of a System.FileDocument or not</p>
 
 **Kind**: global variable  
 
