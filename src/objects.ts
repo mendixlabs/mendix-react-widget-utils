@@ -1,3 +1,5 @@
+import { entityIsPersistable } from "./entities";
+
 /**
  * Create a Mendix Object
  *
@@ -103,6 +105,17 @@ export const getObjectContext = (obj: mendix.lib.MxObject): mendix.lib.MxContext
     const context = new mendix.lib.MxContext();
     context.setContext(obj.getEntity(), obj.getGuid());
     return context;
+};
+
+/**
+ * Return whether or not a Mendix object is persistable or not
+ *
+ * @name objectIsPersistable
+ * @param obj Mendix object
+ */
+export const objectIsPersistable = (obj: mendix.lib.MxObject): boolean => {
+    const entity = obj.getEntity();
+    return entityIsPersistable(entity);
 };
 
 /**

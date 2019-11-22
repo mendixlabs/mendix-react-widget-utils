@@ -8,6 +8,12 @@
 ## Members
 
 <dl>
+<dt><a href="#saveDocument">saveDocument</a></dt>
+<dd><p>Save a Mendix file document</p></dd>
+<dt><a href="#entityIsPersistable">entityIsPersistable</a></dt>
+<dd><p>Is Entity persistent or not</p></dd>
+<dt><a href="#objectIsPersistable">objectIsPersistable</a></dt>
+<dd><p>Return whether or not a Mendix object is persistable or not</p></dd>
 <dt><a href="#executeMicroflow">executeMicroflow</a></dt>
 <dd><p>Execute a microflow as Promise</p></dd>
 <dt><a href="#executeNanoFlow">executeNanoFlow</a></dt>
@@ -74,6 +80,41 @@
 | Param | Description |
 | --- | --- |
 | args | <p>Arguments to pass down the Mendix Logger</p> |
+
+<a name="saveDocument"></a>
+
+## saveDocument
+<p>Save a Mendix file document</p>
+
+**Kind**: global variable  
+
+| Param | Description |
+| --- | --- |
+| name | <p>File name</p> |
+| file | <p>Blob</p> |
+| obj | <p>Mendix Object (FileDocument)</p> |
+
+<a name="entityIsPersistable"></a>
+
+## entityIsPersistable
+<p>Is Entity persistent or not</p>
+
+**Kind**: global variable  
+
+| Param | Description |
+| --- | --- |
+| entity | <p>Entity name</p> |
+
+<a name="objectIsPersistable"></a>
+
+## objectIsPersistable
+<p>Return whether or not a Mendix object is persistable or not</p>
+
+**Kind**: global variable  
+
+| Param | Description |
+| --- | --- |
+| obj | <p>Mendix object</p> |
 
 <a name="executeMicroflow"></a>
 
