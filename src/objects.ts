@@ -58,6 +58,18 @@ export const getObject = (guid: string): Promise<mendix.lib.MxObject | null> =>
     });
 
 /**
+ * Get a list of Mendix Objects
+ *
+ * @name getObjects
+ * @category Objects
+ * @param guid Object guid of the Mendix Object that you try to return
+ */
+export const getObjects = (guids: string[]): Promise<mendix.lib.MxObject[] | null> =>
+    new Promise((resolve, reject) => {
+        window.mx.data.get({ guids, callback: resolve, error: reject });
+    });
+
+/**
  * Fetch an attribute from a Mendix Object
  *
  * @name fetchAttr

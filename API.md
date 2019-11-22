@@ -8,8 +8,6 @@
 ## Members
 
 <dl>
-<dt><a href="#debug">debug</a></dt>
-<dd><p>Mendix debugger console</p></dd>
 <dt><a href="#executeMicroflow">executeMicroflow</a></dt>
 <dd><p>Execute a microflow as Promise</p></dd>
 <dt><a href="#executeNanoFlow">executeNanoFlow</a></dt>
@@ -18,6 +16,8 @@
 <dd><p>Open a page</p></dd>
 <dt><a href="#executeAction">executeAction</a></dt>
 <dd><p>Execute an action</p></dd>
+<dt><a href="#debug">debug</a></dt>
+<dd><p>Mendix debugger console</p></dd>
 <dt><a href="#createObject">createObject</a></dt>
 <dd><p>Create a Mendix Object</p></dd>
 <dt><a href="#commitObject">commitObject</a></dt>
@@ -28,6 +28,8 @@
 <dd><p>Delete a Mendix Object</p></dd>
 <dt><a href="#getObject">getObject</a></dt>
 <dd><p>Get a Mendix Object</p></dd>
+<dt><a href="#getObjects">getObjects</a></dt>
+<dd><p>Get a list of Mendix Objects</p></dd>
 <dt><a href="#fetchAttr">fetchAttr</a></dt>
 <dd><p>Fetch an attribute from a Mendix Object</p></dd>
 <dt><a href="#getObjectContext">getObjectContext</a></dt>
@@ -72,17 +74,6 @@
 | Param | Description |
 | --- | --- |
 | args | <p>Arguments to pass down the Mendix Logger</p> |
-
-<a name="debug"></a>
-
-## debug
-<p>Mendix debugger console</p>
-
-**Kind**: global variable  
-
-| Param | Description |
-| --- | --- |
-| id | <p>ID for the debugger, coming from the widget (const id = this.props.friendlyId || this.widgetId;)</p> |
 
 <a name="executeMicroflow"></a>
 
@@ -143,6 +134,18 @@
 | context | <p>Context for the action</p> |
 | mxform | <p>Form coming from the widget</p> |
 
+<a name="debug"></a>
+
+## debug
+<p>Mendix debugger console</p>
+
+**Kind**: global variable  
+**Category**: Debug  
+
+| Param | Description |
+| --- | --- |
+| id | <p>ID for the debugger, coming from the widget (const id = this.props.friendlyId || this.widgetId;)</p> |
+
 <a name="createObject"></a>
 
 ## createObject
@@ -195,6 +198,18 @@
 
 ## getObject
 <p>Get a Mendix Object</p>
+
+**Kind**: global variable  
+**Category**: Objects  
+
+| Param | Description |
+| --- | --- |
+| guid | <p>Object guid of the Mendix Object that you try to return</p> |
+
+<a name="getObjects"></a>
+
+## getObjects
+<p>Get a list of Mendix Objects</p>
 
 **Kind**: global variable  
 **Category**: Objects  
