@@ -108,6 +108,39 @@ export const getObjectContext = (obj: mendix.lib.MxObject): mendix.lib.MxContext
 };
 
 /**
+ * Get context from the first Mendix Object encountered
+ *
+ * @name getObjectContextFromObjects
+ * @param objs Mendix Objects array
+ */
+export const getObjectContextFromObjects = (...objs: mendix.lib.MxObject[]): mendix.lib.MxContext => {
+    const context = new mendix.lib.MxContext();
+    let contextCreated = false;
+    objs.forEach(obj => {
+        if (!contextCreated && obj && obj.getGuid) {
+            context.setContext(obj.getEntity(), obj.getGuid());
+            contextCreated = true;
+        }
+    });
+    return context;
+};
+
+/**
+ * Get context from a guid and entityname
+ *
+ * @name getObjectContextFromId
+ * @param guid Mendix Object guid
+ * @param entityName Mendix Entity name
+ */
+export const getObjectContextFromId = (guid: string, entityName: string): mendix.lib.MxContext => {
+    const context = new mendix.lib.MxContext();
+    if (guid && entityName) {
+        context.setContext(entityName, guid);
+    }
+    return context;
+};
+
+/**
  * Return whether or not a Mendix object is persistable or not
  *
  * @name objectIsPersistable

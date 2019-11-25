@@ -16,6 +16,10 @@
 <dd><p>Is Entity an instance of a System.Image or not</p></dd>
 <dt><a href="#entityIsFileDocument">entityIsFileDocument</a></dt>
 <dd><p>Is Entity an instance of a System.FileDocument or not</p></dd>
+<dt><a href="#getObjectContextFromObjects">getObjectContextFromObjects</a></dt>
+<dd><p>Get context from the first Mendix Object encountered</p></dd>
+<dt><a href="#getObjectContextFromId">getObjectContextFromId</a></dt>
+<dd><p>Get context from a guid and entityname</p></dd>
 <dt><a href="#objectIsPersistable">objectIsPersistable</a></dt>
 <dd><p>Return whether or not a Mendix object is persistable or not</p></dd>
 <dt><a href="#executeMicroflow">executeMicroflow</a></dt>
@@ -130,6 +134,29 @@
 | Param | Description |
 | --- | --- |
 | entity | <p>Entity name</p> |
+
+<a name="getObjectContextFromObjects"></a>
+
+## getObjectContextFromObjects
+<p>Get context from the first Mendix Object encountered</p>
+
+**Kind**: global variable  
+
+| Param | Description |
+| --- | --- |
+| objs | <p>Mendix Objects array</p> |
+
+<a name="getObjectContextFromId"></a>
+
+## getObjectContextFromId
+<p>Get context from a guid and entityname</p>
+
+**Kind**: global variable  
+
+| Param | Description |
+| --- | --- |
+| guid | <p>Mendix Object guid</p> |
+| entityName | <p>Mendix Entity name</p> |
 
 <a name="objectIsPersistable"></a>
 
