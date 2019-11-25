@@ -113,10 +113,10 @@ export const getObjectContext = (obj: mendix.lib.MxObject): mendix.lib.MxContext
  * @name getObjectContextFromObjects
  * @param objs Mendix Objects array
  */
-export const getObjectContextFromObjects = (...objs: mendix.lib.MxObject[]): mendix.lib.MxContext => {
+export const getObjectContextFromObjects = (...objs: mendix.lib.MxObject[] | undefined[]): mendix.lib.MxContext => {
     const context = new mendix.lib.MxContext();
     let contextCreated = false;
-    objs.forEach(obj => {
+    objs.forEach((obj: mendix.lib.MxObject | undefined) => {
         if (!contextCreated && obj && obj.getGuid) {
             context.setContext(obj.getEntity(), obj.getGuid());
             contextCreated = true;
