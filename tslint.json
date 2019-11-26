@@ -4,6 +4,8 @@
     "tslint-config-prettier"
   ],
   "rules": {
-    "ordered-imports": false
+    "ordered-imports": false,
+    "no-submodule-imports": false,
+    "max-classes-per-file": false
   }
 }

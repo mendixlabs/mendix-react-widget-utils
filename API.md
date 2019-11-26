@@ -1,6 +1,10 @@
 ## Classes
 
 <dl>
+<dt><a href="#PropsValidation">PropsValidation</a></dt>
+<dd></dd>
+<dt><a href="#PropsValidation">PropsValidation</a></dt>
+<dd></dd>
 <dt><a href="#WidgetBase">WidgetBase</a></dt>
 <dd></dd>
 </dl>
@@ -52,6 +56,128 @@
 <dd><p>Fetch Mendix objects over an XPath</p></dd>
 </dl>
 
+<a name="PropsValidation"></a>
+
+## PropsValidation
+**Kind**: global class  
+
+* [PropsValidation](#PropsValidation)
+    * [new PropsValidation(validationScheme)](#new_PropsValidation_new)
+    * _instance_
+        * [.fatalMessages](#PropsValidation+fatalMessages) ⇒
+    * _static_
+        * [.addValidation](#PropsValidation.addValidation)
+        * [.deleteValidation](#PropsValidation.deleteValidation)
+        * [.messages](#PropsValidation.messages) ⇒
+
+<a name="new_PropsValidation_new"></a>
+
+### new PropsValidation(validationScheme)
+<p>PropsValidation constructor</p>
+
+
+| Param | Description |
+| --- | --- |
+| validationScheme | <p>List of Validation objects</p> |
+
+<a name="PropsValidation+fatalMessages"></a>
+
+### propsValidation.fatalMessages ⇒
+<p>Get all fatal messages</p>
+
+**Kind**: instance property of [<code>PropsValidation</code>](#PropsValidation)  
+**Returns**: <p>all fatal validation messages</p>  
+<a name="PropsValidation.addValidation"></a>
+
+### PropsValidation.addValidation
+<p>Add a validation message</p>
+
+**Kind**: static property of [<code>PropsValidation</code>](#PropsValidation)  
+
+| Param | Description |
+| --- | --- |
+| msg | <p>Validation message string</p> |
+| type | <p>Validation type, default is &quot;fatal&quot;</p> |
+
+<a name="PropsValidation.deleteValidation"></a>
+
+### PropsValidation.deleteValidation
+<p>Delete a validation message</p>
+
+**Kind**: static property of [<code>PropsValidation</code>](#PropsValidation)  
+
+| Param | Description |
+| --- | --- |
+| id | <p>Validation ID</p> |
+
+<a name="PropsValidation.messages"></a>
+
+### PropsValidation.messages ⇒
+<p>Get all messages</p>
+
+**Kind**: static property of [<code>PropsValidation</code>](#PropsValidation)  
+**Returns**: <p>all validation messages</p>  
+<a name="PropsValidation"></a>
+
+## PropsValidation
+**Kind**: global class  
+
+* [PropsValidation](#PropsValidation)
+    * [new PropsValidation(validationScheme)](#new_PropsValidation_new)
+    * _instance_
+        * [.fatalMessages](#PropsValidation+fatalMessages) ⇒
+    * _static_
+        * [.addValidation](#PropsValidation.addValidation)
+        * [.deleteValidation](#PropsValidation.deleteValidation)
+        * [.messages](#PropsValidation.messages) ⇒
+
+<a name="new_PropsValidation_new"></a>
+
+### new PropsValidation(validationScheme)
+<p>PropsValidation constructor</p>
+
+
+| Param | Description |
+| --- | --- |
+| validationScheme | <p>List of Validation objects</p> |
+
+<a name="PropsValidation+fatalMessages"></a>
+
+### propsValidation.fatalMessages ⇒
+<p>Get all fatal messages</p>
+
+**Kind**: instance property of [<code>PropsValidation</code>](#PropsValidation)  
+**Returns**: <p>all fatal validation messages</p>  
+<a name="PropsValidation.addValidation"></a>
+
+### PropsValidation.addValidation
+<p>Add a validation message</p>
+
+**Kind**: static property of [<code>PropsValidation</code>](#PropsValidation)  
+
+| Param | Description |
+| --- | --- |
+| msg | <p>Validation message string</p> |
+| type | <p>Validation type, default is &quot;fatal&quot;</p> |
+
+<a name="PropsValidation.deleteValidation"></a>
+
+### PropsValidation.deleteValidation
+<p>Delete a validation message</p>
+
+**Kind**: static property of [<code>PropsValidation</code>](#PropsValidation)  
+
+| Param | Description |
+| --- | --- |
+| id | <p>Validation ID</p> |
+
+<a name="PropsValidation.messages"></a>
+
+### PropsValidation.messages ⇒
+<p>Get all messages</p>
+
+**Kind**: static property of [<code>PropsValidation</code>](#PropsValidation)  
+**Returns**: <p>all validation messages</p>  
 <a name="WidgetBase"></a>
 
 ## WidgetBase

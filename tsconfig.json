@@ -12,6 +12,6 @@
     "outDir": "./lib",
     "sourceMap": false,
     "declaration": true,
-    "removeComments": false
+    "removeComments": false,
   }
 }
