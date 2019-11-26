@@ -19,6 +19,7 @@ export class ValidationMessage {
 export interface IValidationObject {
     condition: boolean;
     message: string;
+    category?: string;
 }
 
 /**
@@ -38,7 +39,10 @@ export class PropsValidation {
         if (validationScheme && validationScheme.length) {
             validationScheme.map(schemeObj => {
                 if (schemeObj.condition) {
-                    this.addValidation(schemeObj.message);
+                    const message = !!schemeObj.category
+                        ? `[${schemeObj.category}] :: ${schemeObj.message}`
+                        : schemeObj.message;
+                    this.addValidation(message);
                 }
             });
         }
