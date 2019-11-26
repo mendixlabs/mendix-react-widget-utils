@@ -28,8 +28,8 @@
     "prebuild": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
     "build:ts": "tsc",
     "build:doc": "jsdoc2md --files ./src/**/*.ts --configure ./jsdoc2md.json > ./api.md",
-    "build": "npm run build:ts && npm run build:doc",
-    "typedoc": "node ./node_modules/.bin/typedoc --out ./docs/ ./src/"
+    "build": "npm run build:ts && npm run typedoc",
+    "typedoc": "node ./node_modules/.bin/typedoc --out ./docs/ ./src/",
     "test": "jest",
     "coverage": "jest --coverage",
     "watch": "npm run build -- --watch",
