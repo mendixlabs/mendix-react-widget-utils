@@ -29,7 +29,7 @@
     "build:ts": "tsc",
     "build": "npm run build:ts && npm run typedoc && npm run assets",
     "typedoc": "node ./node_modules/.bin/typedoc --out ./docs/ ./src/",
-    "assets": "cp -r ./assets/* ./docs/",
+    "assets": "cp -r ./assets/* ./docs/ && cp -r ./assets/.nojekyll ./docs/",
     "test": "jest",
     "coverage": "jest --coverage",
     "watch": "npm run build -- --watch",
