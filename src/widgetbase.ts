@@ -3,7 +3,7 @@ import { getObjectContext } from "./objects";
 import { ICommonWidgetProps } from "./interfaces";
 
 /**
- * Widget base with convenient methods for building widgets fast
+ * Widget base with convenient methods for building widgets fast. This cannot be used in React widgets, but you could copy these if you want
  *
  * @class WidgetBase
  */

@@ -12,3 +12,5 @@ yarn-error.log*
 src/
 __tests__/
 .vscode/
+docs/
+assets/
