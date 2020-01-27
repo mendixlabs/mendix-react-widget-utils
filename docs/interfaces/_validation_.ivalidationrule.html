@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IValidationObject | @jeltemx/mendix-react-widget-utils</title>
+	<title>IValidationRule | @jeltemx/mendix-react-widget-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -59,10 +59,10 @@
 					<a href="../modules/_validation_.html">&quot;validation&quot;</a>
 				</li>
 				<li>
-					<a href="_validation_.ivalidationobject.html">IValidationObject</a>
+					<a href="_validation_.ivalidationrule.html">IValidationRule</a>
 				</li>
 			</ul>
-			<h1>Interface IValidationObject</h1>
+			<h1>Interface IValidationRule</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IValidationObject</span>
+						<span class="target">IValidationRule</span>
 					</li>
 				</ul>
 			</section>
@@ -84,9 +84,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_validation_.ivalidationobject.html#category" class="tsd-kind-icon">category</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_validation_.ivalidationobject.html#condition" class="tsd-kind-icon">condition</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_validation_.ivalidationobject.html#message" class="tsd-kind-icon">message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_validation_.ivalidationrule.html#cat" class="tsd-kind-icon">cat</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_validation_.ivalidationrule.html#con" class="tsd-kind-icon">con</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_validation_.ivalidationrule.html#msg" class="tsd-kind-icon">msg</a></li>
 							</ul>
 						</section>
 					</div>
@@ -95,32 +95,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="category" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> category</h3>
-					<div class="tsd-signature tsd-kind-icon">category<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="cat" class="tsd-anchor"></a>
+					<h3>cat</h3>
+					<div class="tsd-signature tsd-kind-icon">cat<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/678383c/src/validation.ts#L22">validation.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/cea45ca/src/validation.ts#L7">validation.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="condition" class="tsd-anchor"></a>
-					<h3>condition</h3>
-					<div class="tsd-signature tsd-kind-icon">condition<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="con" class="tsd-anchor"></a>
+					<h3>con</h3>
+					<div class="tsd-signature tsd-kind-icon">con<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/678383c/src/validation.ts#L20">validation.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/cea45ca/src/validation.ts#L6">validation.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="message" class="tsd-anchor"></a>
-					<h3>message</h3>
-					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="msg" class="tsd-anchor"></a>
+					<h3>msg</h3>
+					<div class="tsd-signature tsd-kind-icon">msg<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/678383c/src/validation.ts#L21">validation.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/cea45ca/src/validation.ts#L8">validation.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -161,24 +161,21 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/_validation_.propsvalidation.html" class="tsd-kind-icon">Props<wbr>Validation</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/_validation_.validationmessage.html" class="tsd-kind-icon">Validation<wbr>Message</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_validation_.ivalidationobject.html" class="tsd-kind-icon">IValidation<wbr>Object</a>
+						<a href="_validation_.ivalidationrule.html" class="tsd-kind-icon">IValidation<wbr>Rule</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_validation_.ivalidationobject.html#category" class="tsd-kind-icon">category</a>
+								<a href="_validation_.ivalidationrule.html#cat" class="tsd-kind-icon">cat</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_validation_.ivalidationobject.html#condition" class="tsd-kind-icon">condition</a>
+								<a href="_validation_.ivalidationrule.html#con" class="tsd-kind-icon">con</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_validation_.ivalidationobject.html#message" class="tsd-kind-icon">message</a>
+								<a href="_validation_.ivalidationrule.html#msg" class="tsd-kind-icon">msg</a>
 							</li>
 						</ul>
 					</li>
@@ -186,6 +183,15 @@
 				<ul class="after-current">
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/_validation_.html#typevalidationseverity" class="tsd-kind-icon">Type<wbr>Validation<wbr>Severity</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_validation_.html#getvalidationmessagesfromrules" class="tsd-kind-icon">get<wbr>Validation<wbr>Messages<wbr>From<wbr>Rules</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_validation_.html#validationrule" class="tsd-kind-icon">validation<wbr>Rule</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+						<a href="../modules/_validation_.html#validationstrings" class="tsd-kind-icon">Validation<wbr>Strings</a>
 					</li>
 				</ul>
 			</nav>

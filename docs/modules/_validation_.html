@@ -73,20 +73,32 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_validation_.propsvalidation.html" class="tsd-kind-icon">Props<wbr>Validation</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_validation_.validationmessage.html" class="tsd-kind-icon">Validation<wbr>Message</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_validation_.ivalidationobject.html" class="tsd-kind-icon">IValidation<wbr>Object</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_validation_.ivalidationrule.html" class="tsd-kind-icon">IValidation<wbr>Rule</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_validation_.html#typevalidationseverity" class="tsd-kind-icon">Type<wbr>Validation<wbr>Severity</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_validation_.html#getvalidationmessagesfromrules" class="tsd-kind-icon">get<wbr>Validation<wbr>Messages<wbr>From<wbr>Rules</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_validation_.html#validationrule" class="tsd-kind-icon">validation<wbr>Rule</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_validation_.html#validationstrings" class="tsd-kind-icon">Validation<wbr>Strings</a></li>
 							</ul>
 						</section>
 					</div>
@@ -100,9 +112,104 @@
 					<div class="tsd-signature tsd-kind-icon">Type<wbr>Validation<wbr>Severity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"fatal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"warning"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/678383c/src/validation.ts#L3">validation.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/cea45ca/src/validation.ts#L3">validation.ts:3</a></li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="getvalidationmessagesfromrules" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Validation<wbr>Messages<wbr>From<wbr>Rules</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Validation<wbr>Messages<wbr>From<wbr>Rules<span class="tsd-signature-symbol">(</span>rules<span class="tsd-signature-symbol">: </span><a href="../interfaces/_validation_.ivalidationrule.html" class="tsd-signature-type">IValidationRule</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_validation_.validationmessage.html" class="tsd-signature-type">ValidationMessage</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/cea45ca/src/validation.ts#L38">validation.ts:38</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>rules: <a href="../interfaces/_validation_.ivalidationrule.html" class="tsd-signature-type">IValidationRule</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_validation_.validationmessage.html" class="tsd-signature-type">ValidationMessage</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="validationrule" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> validation<wbr>Rule</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">validation<wbr>Rule<span class="tsd-signature-symbol">(</span>rule<span class="tsd-signature-symbol">: </span><a href="../interfaces/_validation_.ivalidationrule.html" class="tsd-signature-type">IValidationRule</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_validation_.validationmessage.html" class="tsd-signature-type">ValidationMessage</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/cea45ca/src/validation.ts#L31">validation.ts:31</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>rule: <a href="../interfaces/_validation_.ivalidationrule.html" class="tsd-signature-type">IValidationRule</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_validation_.validationmessage.html" class="tsd-signature-type">ValidationMessage</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">null</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
+					<a name="validationstrings" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Validation<wbr>Strings</h3>
+					<div class="tsd-signature tsd-kind-icon">Validation<wbr>Strings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/cea45ca/src/validation.ts#L25">validation.ts:25</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="validationstrings.action_mf" class="tsd-anchor"></a>
+						<h3>ACTION_<wbr>MF</h3>
+						<div class="tsd-signature tsd-kind-icon">ACTION_<wbr>MF<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Action is set to Microflow, but microflow is not defined&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/cea45ca/src/validation.ts#L26">validation.ts:26</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="validationstrings.action_nf" class="tsd-anchor"></a>
+						<h3>ACTION_<wbr>NF</h3>
+						<div class="tsd-signature tsd-kind-icon">ACTION_<wbr>NF<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Action is set to Nanoflow, but nanoflow is not defined&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/cea45ca/src/validation.ts#L27">validation.ts:27</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="validationstrings.action_page" class="tsd-anchor"></a>
+						<h3>ACTION_<wbr>PAGE</h3>
+						<div class="tsd-signature tsd-kind-icon">ACTION_<wbr>PAGE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Action is set to Open page, but page is not defined&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/cea45ca/src/validation.ts#L28">validation.ts:28</a></li>
+							</ul>
+						</aside>
+					</section>
 				</section>
 			</section>
 		</div>
@@ -141,16 +248,22 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/_validation_.propsvalidation.html" class="tsd-kind-icon">Props<wbr>Validation</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/_validation_.validationmessage.html" class="tsd-kind-icon">Validation<wbr>Message</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_validation_.ivalidationobject.html" class="tsd-kind-icon">IValidation<wbr>Object</a>
+						<a href="../interfaces/_validation_.ivalidationrule.html" class="tsd-kind-icon">IValidation<wbr>Rule</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="_validation_.html#typevalidationseverity" class="tsd-kind-icon">Type<wbr>Validation<wbr>Severity</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_validation_.html#getvalidationmessagesfromrules" class="tsd-kind-icon">get<wbr>Validation<wbr>Messages<wbr>From<wbr>Rules</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_validation_.html#validationrule" class="tsd-kind-icon">validation<wbr>Rule</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+						<a href="_validation_.html#validationstrings" class="tsd-kind-icon">Validation<wbr>Strings</a>
 					</li>
 				</ul>
 			</nav>

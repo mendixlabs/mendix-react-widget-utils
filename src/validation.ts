@@ -2,6 +2,12 @@ import uuid from "uuid/v4";
 
 export type TypeValidationSeverity = "fatal" | "warning";
 
+export interface IValidationRule {
+    con: boolean;
+    cat: string;
+    msg: string;
+}
+
 export class ValidationMessage {
     public id: string;
     public message: string;
@@ -16,76 +22,18 @@ export class ValidationMessage {
     }
 }
 
-export interface IValidationObject {
-    condition: boolean;
-    message: string;
-    category?: string;
-}
+export const ValidationStrings = {
+    ACTION_MF: "Action is set to Microflow, but microflow is not defined",
+    ACTION_NF: "Action is set to Nanoflow, but nanoflow is not defined",
+    ACTION_PAGE: "Action is set to Open page, but page is not defined",
+};
 
-/**
- *
- * @class PropsValidation
- */
-export class PropsValidation {
-    private validationMessages: ValidationMessage[] = [];
-
-    /**
-     * PropsValidation constructor
-     * @param validationScheme List of Validation objects
-     */
-    constructor(validationScheme: IValidationObject[]) {
-        this.validationMessages = [];
-
-        if (validationScheme && validationScheme.length) {
-            validationScheme.map(schemeObj => {
-                if (schemeObj.condition) {
-                    const message = !!schemeObj.category
-                        ? `[${schemeObj.category}] :: ${schemeObj.message}`
-                        : schemeObj.message;
-                    this.addValidation(message);
-                }
-            });
-        }
+export const validationRule = (rule: IValidationRule): ValidationMessage | null => {
+    if (rule.con) {
+        return new ValidationMessage(`${rule.cat} :: ${rule.msg}`);
     }
+    return null;
+};
 
-    /**
-     * Add a validation message
-     * @name addValidation
-     * @memberof PropsValidation
-     * @param msg Validation message string
-     * @param type Validation type, default is "fatal"
-     */
-    public addValidation(msg: string, type: TypeValidationSeverity = "fatal"): void {
-        this.validationMessages.push(new ValidationMessage(msg, type));
-    }
-
-    /**
-     * Delete a validation message
-     *
-     * @memberof PropsValidation
-     * @name deleteValidation
-     * @param id Validation ID
-     */
-    public deleteValidation(id: string): void {
-        this.validationMessages = this.validationMessages.filter(m => m.id !== id);
-    }
-
-    /**
-     * Get all messages
-     * @memberof PropsValidation
-     * @name messages
-     * @returns all validation messages
-     */
-    get messages() {
-        return this.validationMessages;
-    }
-
-    /**
-     * Get all fatal messages
-     * @memberof PropsValidation
-     * @returns all fatal validation messages
-     */
-    get fatalMessages() {
-        return this.validationMessages.filter(m => m.fatal);
-    }
-}
+export const getValidationMessagesFromRules = (rules: IValidationRule[]): ValidationMessage[] =>
+    rules.map(rule => validationRule(rule)).filter(msg => msg !== null) as ValidationMessage[];
