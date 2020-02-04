@@ -1,6 +1,6 @@
 {
   "name": "@jeltemx/mendix-react-widget-utils",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "Mendix Widget utils to make widget development a little easier",
   "license": "MIT",
   "repository": {
