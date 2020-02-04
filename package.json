@@ -3,7 +3,10 @@
   "version": "0.3.7",
   "description": "Mendix Widget utils to make widget development a little easier",
   "license": "MIT",
-  "repository": "",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/JelteMX/mendix-react-widget-utils.git"
+  },
   "author": {
     "name": "Jelte Lagendijk",
     "email": "jelte.lagendijk@mendix.com",
