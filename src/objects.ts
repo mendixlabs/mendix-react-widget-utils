@@ -1,5 +1,31 @@
 import { entityIsPersistable } from "./entities";
 
+export interface IFilterOptions {
+    id?: string;
+    attributes?: string[];
+    offset?: number;
+    sort?: mx.Sort[];
+    amount?: number;
+    distinct?: boolean;
+    references?: mx.ReferencesSpec;
+}
+
+interface IGetOptions {
+    noCache?: boolean;
+    count?: boolean;
+    path?: string;
+    callback: (objects: mendix.lib.MxObject[]) => void;
+    error?: (error: Error) => void;
+    filter?: IFilterOptions;
+}
+
+interface IGetXPathOptions extends IGetOptions {
+    xpath: string;
+}
+interface IGetGuidsOptions extends IGetOptions {
+    guids: string[];
+}
+
 /**
  * Create a Mendix Object
  *
@@ -66,9 +92,15 @@ export const getObject = (guid: string): Promise<mendix.lib.MxObject | null> =>
  * @category Objects
  * @param guid Object guid of the Mendix Object that you try to return
  */
-export const getObjects = (guids: string[]): Promise<mendix.lib.MxObject[] | null> =>
+export const getObjects = (guids: string[], filter?: IFilterOptions): Promise<mendix.lib.MxObject[] | null> =>
     new Promise((resolve, reject) => {
-        window.mx.data.get({ guids, callback: resolve, error: reject });
+        const getOptions: IGetGuidsOptions = { guids, callback: resolve, error: reject };
+
+        if (filter) {
+            getOptions.filter = filter;
+        }
+
+        window.mx.data.get(getOptions);
     });
 
 /**
@@ -163,7 +195,8 @@ export const objectIsPersistable = (obj: mendix.lib.MxObject): boolean => {
 export const fetchByXpath = (
     contextObject: mendix.lib.MxObject,
     entityName: string,
-    constraint: string
+    constraint: string,
+    filter?: IFilterOptions
 ): Promise<mendix.lib.MxObject[] | null> => {
     return new Promise((resolve, reject) => {
         const requiresContext = constraint && constraint.indexOf("[%CurrentObject%]") > -1;
@@ -175,10 +208,16 @@ export const fetchByXpath = (
 
         const entityConstraint = constraint ? constraint.replace(/\[%CurrentObject%]/g, contextGuid) : "";
 
-        window.mx.data.get({
-            callback: res => resolve(res),
-            error: error => reject(error),
+        const getOptions: IGetXPathOptions = {
+            callback: (res: mendix.lib.MxObject[] | null) => resolve(res),
+            error: (error: Error) => reject(error),
             xpath: `//${entityName}${entityConstraint}`,
-        });
+        };
+
+        if (filter) {
+            getOptions.filter = filter;
+        }
+
+        window.mx.data.get(getOptions);
     });
 };

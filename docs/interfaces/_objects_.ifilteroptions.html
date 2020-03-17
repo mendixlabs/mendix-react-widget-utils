@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IAction | @jeltemx/mendix-react-widget-utils</title>
+	<title>IFilterOptions | @jeltemx/mendix-react-widget-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,31 +56,24 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_interfaces_.html">&quot;interfaces&quot;</a>
+					<a href="../modules/_objects_.html">&quot;objects&quot;</a>
 				</li>
 				<li>
-					<a href="_interfaces_.iaction.html">IAction</a>
+					<a href="_objects_.ifilteroptions.html">IFilterOptions</a>
 				</li>
 			</ul>
-			<h1>Interface IAction</h1>
+			<h1>Interface IFilterOptions</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Action interface used by the executeAction method in Widgetbase</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IAction</span>
+						<span class="target">IFilterOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -91,9 +84,13 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_interfaces_.iaction.html#microflow" class="tsd-kind-icon">microflow</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_interfaces_.iaction.html#nanoflow" class="tsd-kind-icon">nanoflow</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_interfaces_.iaction.html#page" class="tsd-kind-icon">page</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_objects_.ifilteroptions.html#amount" class="tsd-kind-icon">amount</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_objects_.ifilteroptions.html#attributes" class="tsd-kind-icon">attributes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_objects_.ifilteroptions.html#distinct" class="tsd-kind-icon">distinct</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_objects_.ifilteroptions.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_objects_.ifilteroptions.html#offset" class="tsd-kind-icon">offset</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_objects_.ifilteroptions.html#references" class="tsd-kind-icon">references</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_objects_.ifilteroptions.html#sort" class="tsd-kind-icon">sort</a></li>
 							</ul>
 						</section>
 					</div>
@@ -102,32 +99,72 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="microflow" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> microflow</h3>
-					<div class="tsd-signature tsd-kind-icon">microflow<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="amount" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> amount</h3>
+					<div class="tsd-signature tsd-kind-icon">amount<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/588f82a/src/interfaces.ts#L40">interfaces.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/588f82a/src/objects.ts#L8">objects.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="nanoflow" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> nanoflow</h3>
-					<div class="tsd-signature tsd-kind-icon">nanoflow<span class="tsd-signature-symbol">:</span> <a href="_interfaces_.inanoflow.html" class="tsd-signature-type">INanoflow</a></div>
+					<a name="attributes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> attributes</h3>
+					<div class="tsd-signature tsd-kind-icon">attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/588f82a/src/interfaces.ts#L41">interfaces.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/588f82a/src/objects.ts#L5">objects.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="page" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> page</h3>
-					<div class="tsd-signature tsd-kind-icon">page<span class="tsd-signature-symbol">:</span> <a href="_interfaces_.iopenpageaction.html" class="tsd-signature-type">IOpenPageAction</a></div>
+					<a name="distinct" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> distinct</h3>
+					<div class="tsd-signature tsd-kind-icon">distinct<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/588f82a/src/interfaces.ts#L42">interfaces.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/588f82a/src/objects.ts#L9">objects.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="id" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/588f82a/src/objects.ts#L4">objects.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="offset" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> offset</h3>
+					<div class="tsd-signature tsd-kind-icon">offset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/588f82a/src/objects.ts#L6">objects.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="references" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> references</h3>
+					<div class="tsd-signature tsd-kind-icon">references<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">mx.ReferencesSpec</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/588f82a/src/objects.ts#L10">objects.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="sort" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> sort</h3>
+					<div class="tsd-signature tsd-kind-icon">sort<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">mx.Sort</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/588f82a/src/objects.ts#L7">objects.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -154,10 +191,10 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_index_.html">&quot;index&quot;</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_interfaces_.html">&quot;interfaces&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="../modules/_objects_.html">&quot;objects&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -170,38 +207,77 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_interfaces_.iaction.html" class="tsd-kind-icon">IAction</a>
+						<a href="_objects_.ifilteroptions.html" class="tsd-kind-icon">IFilter<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_interfaces_.iaction.html#microflow" class="tsd-kind-icon">microflow</a>
+								<a href="_objects_.ifilteroptions.html#amount" class="tsd-kind-icon">amount</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_interfaces_.iaction.html#nanoflow" class="tsd-kind-icon">nanoflow</a>
+								<a href="_objects_.ifilteroptions.html#attributes" class="tsd-kind-icon">attributes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_interfaces_.iaction.html#page" class="tsd-kind-icon">page</a>
+								<a href="_objects_.ifilteroptions.html#distinct" class="tsd-kind-icon">distinct</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_objects_.ifilteroptions.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_objects_.ifilteroptions.html#offset" class="tsd-kind-icon">offset</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_objects_.ifilteroptions.html#references" class="tsd-kind-icon">references</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_objects_.ifilteroptions.html#sort" class="tsd-kind-icon">sort</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_interfaces_.icommonwidgetprops.html" class="tsd-kind-icon">ICommon<wbr>Widget<wbr>Props</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_objects_.igetguidsoptions.html" class="tsd-kind-icon">IGet<wbr>Guids<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_interfaces_.inanoflow.html" class="tsd-kind-icon">INanoflow</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_objects_.igetoptions.html" class="tsd-kind-icon">IGet<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_interfaces_.iopenpageaction.html" class="tsd-kind-icon">IOpen<wbr>Page<wbr>Action</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_objects_.igetxpathoptions.html" class="tsd-kind-icon">IGetXPath<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/_interfaces_.html#actionreturntype" class="tsd-kind-icon">Action<wbr>Return<wbr>Type</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_objects_.html#commitobject" class="tsd-kind-icon">commit<wbr>Object</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/_interfaces_.html#actiontype" class="tsd-kind-icon">Action<wbr>Type</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_objects_.html#createobject" class="tsd-kind-icon">create<wbr>Object</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/_interfaces_.html#openpageas" class="tsd-kind-icon">Open<wbr>Page<wbr>As</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_objects_.html#deleteobject" class="tsd-kind-icon">delete<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_objects_.html#deleteobjectguid" class="tsd-kind-icon">delete<wbr>Object<wbr>Guid</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../modules/_objects_.html#fetchattr" class="tsd-kind-icon">fetch<wbr>Attr</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_objects_.html#fetchbyxpath" class="tsd-kind-icon">fetch<wbr>ByXpath</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_objects_.html#getobject" class="tsd-kind-icon">get<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_objects_.html#getobjectcontext" class="tsd-kind-icon">get<wbr>Object<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_objects_.html#getobjectcontextfromid" class="tsd-kind-icon">get<wbr>Object<wbr>Context<wbr>From<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_objects_.html#getobjectcontextfromobjects" class="tsd-kind-icon">get<wbr>Object<wbr>Context<wbr>From<wbr>Objects</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_objects_.html#getobjects" class="tsd-kind-icon">get<wbr>Objects</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_objects_.html#objectispersistable" class="tsd-kind-icon">object<wbr>IsPersistable</a>
 					</li>
 				</ul>
 			</nav>
