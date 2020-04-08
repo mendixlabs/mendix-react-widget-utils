@@ -1,0 +1,10 @@
+{
+    "out": "docs",
+    "theme": "default",
+    "stripInternal": "true",
+    "preserveConstEnums": "true",
+    "target": "ES6",
+    "name": "Mendix React Widget Utils",
+    "gitRevision": "master",
+    "mode": "file"
+}

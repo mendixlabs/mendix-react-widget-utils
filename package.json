@@ -35,7 +35,7 @@
     "prebuild": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
     "build:ts": "tsc",
     "build": "npm run build:ts && npm run typedoc && npm run assets",
-    "typedoc": "node ./node_modules/.bin/typedoc --out ./docs/ ./src/",
+    "typedoc": "node ./node_modules/.bin/typedoc ./src/",
     "assets": "cp -r ./assets/* ./docs/ && cp -r ./assets/.nojekyll ./docs/",
     "test": "jest",
     "coverage": "jest --coverage",
