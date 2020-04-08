@@ -140,7 +140,6 @@ export const fetchAttr = <T>(obj: mendix.lib.MxObject, attr: string): Promise<T>
  * @param obj Mendix Object
  * @param attr Attribute
  */
-
 export const getFormattedValue = (obj: mendix.lib.MxObject, attr: string): string | number | boolean => {
     const type = obj.getAttributeType(attr);
     const ret = obj.get(attr);
