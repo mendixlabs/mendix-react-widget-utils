@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>&quot;actions&quot; | @jeltemx/mendix-react-widget-utils</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for @jeltemx/mendix-react-widget-utils">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -59,7 +59,7 @@
 					<a href="_actions_.html">&quot;actions&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;actions&quot;</h1>
+			<h1>Module &quot;actions&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -73,14 +73,14 @@
 						<section class="tsd-index-section ">
 							<h3>Actions Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_actions_.html#executeaction" class="tsd-kind-icon">execute<wbr>Action</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_actions_.html#executemicroflow" class="tsd-kind-icon">execute<wbr>Microflow</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_actions_.html#executenanoflow" class="tsd-kind-icon">execute<wbr>Nano<wbr>Flow</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_actions_.html#openpage" class="tsd-kind-icon">open<wbr>Page</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_actions_.html#executeaction" class="tsd-kind-icon">execute<wbr>Action</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_actions_.html#executemicroflow" class="tsd-kind-icon">execute<wbr>Microflow</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_actions_.html#executenanoflow" class="tsd-kind-icon">execute<wbr>Nano<wbr>Flow</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_actions_.html#openpage" class="tsd-kind-icon">open<wbr>Page</a></li>
 							</ul>
 							<h3>Other Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_actions_.html#showmendixactionerror" class="tsd-kind-icon">show<wbr>Mendix<wbr>Action<wbr>Error</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-not-exported"><a href="_actions_.html#showmendixactionerror" class="tsd-kind-icon">show<wbr>Mendix<wbr>Action<wbr>Error</a></li>
 							</ul>
 						</section>
 					</div>
@@ -88,23 +88,28 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Actions Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="executeaction" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> execute<wbr>Action</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
 						<li class="tsd-signature tsd-kind-icon">execute<wbr>Action<span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><a href="../interfaces/_interfaces_.iaction.html" class="tsd-signature-type">IAction</a>, showError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MxContext</span>, mxform<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">_FormBase</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MxObject</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MxObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/7fd5825/src/actions.ts#L126">actions.ts:126</a></li>
+									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/fb21ce4/src/actions.ts#L126">actions.ts:126</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Execute an action</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>name</dt>
+									<dd><p>executeAction</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -117,7 +122,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showError: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showError: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>Show error in ui or not</p>
@@ -145,23 +150,28 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="executemicroflow" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> execute<wbr>Microflow</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
 						<li class="tsd-signature tsd-kind-icon">execute<wbr>Microflow<span class="tsd-signature-symbol">(</span>microflow<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MxContext</span>, origin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">_FormBase</span>, showError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_interfaces_.html#actionreturntype" class="tsd-signature-type">ActionReturnType</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/7fd5825/src/actions.ts#L20">actions.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/fb21ce4/src/actions.ts#L20">actions.ts:20</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Execute a microflow as Promise</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>name</dt>
+									<dd><p>executeMicroflow</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -190,7 +200,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showError: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showError: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>Show a Mendix error or not</p>
@@ -202,23 +212,28 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="executenanoflow" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> execute<wbr>Nano<wbr>Flow</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
 						<li class="tsd-signature tsd-kind-icon">execute<wbr>Nano<wbr>Flow<span class="tsd-signature-symbol">(</span>nanoflow<span class="tsd-signature-symbol">: </span><a href="../interfaces/_interfaces_.inanoflow.html" class="tsd-signature-type">INanoflow</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MxContext</span>, origin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">_FormBase</span>, showError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_interfaces_.html#actionreturntype" class="tsd-signature-type">ActionReturnType</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/7fd5825/src/actions.ts#L59">actions.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/fb21ce4/src/actions.ts#L59">actions.ts:59</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Execute a Nanoflow as Promise</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>name</dt>
+									<dd><p>executeNanoFlow</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -247,7 +262,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showError: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showError: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>Show a Mendix error or not</p>
@@ -259,23 +274,28 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="openpage" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> open<wbr>Page</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
 						<li class="tsd-signature tsd-kind-icon">open<wbr>Page<span class="tsd-signature-symbol">(</span>pageAction<span class="tsd-signature-symbol">: </span><a href="../interfaces/_interfaces_.iopenpageaction.html" class="tsd-signature-type">IOpenPageAction</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MxContext</span>, showError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/7fd5825/src/actions.ts#L93">actions.ts:93</a></li>
+									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/fb21ce4/src/actions.ts#L93">actions.ts:93</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Open a page</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>name</dt>
+									<dd><p>openPage</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -296,7 +316,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showError: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showError: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>Show a Mendix error or not</p>
@@ -311,23 +331,23 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Other Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
 					<a name="showmendixactionerror" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> show<wbr>Mendix<wbr>Action<wbr>Error</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">show<wbr>Mendix<wbr>Action<wbr>Error<span class="tsd-signature-symbol">(</span>show<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, type<span class="tsd-signature-symbol">: </span><a href="_interfaces_.html#actiontype" class="tsd-signature-type">ActionType</a>, actionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/7fd5825/src/actions.ts#L3">actions.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/fb21ce4/src/actions.ts#L3">actions.ts:3</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> show: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> show: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 								<li>
 									<h5>type: <a href="_interfaces_.html#actiontype" class="tsd-signature-type">ActionType</a></h5>
@@ -351,47 +371,47 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class="current tsd-kind-module">
 						<a href="_actions_.html">&quot;actions&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class=" tsd-kind-module">
 						<a href="_debug_.html">&quot;debug&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class=" tsd-kind-module">
 						<a href="_documents_.html">&quot;documents&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class=" tsd-kind-module">
 						<a href="_entities_.html">&quot;entities&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class=" tsd-kind-module">
 						<a href="_index_.html">&quot;index&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class=" tsd-kind-module">
 						<a href="_interfaces_.html">&quot;interfaces&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class=" tsd-kind-module">
 						<a href="_objects_.html">&quot;objects&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class=" tsd-kind-module">
 						<a href="_validation_.html">&quot;validation&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_actions_.html#executeaction" class="tsd-kind-icon">execute<wbr>Action</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_actions_.html#executemicroflow" class="tsd-kind-icon">execute<wbr>Microflow</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_actions_.html#executenanoflow" class="tsd-kind-icon">execute<wbr>Nano<wbr>Flow</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_actions_.html#openpage" class="tsd-kind-icon">open<wbr>Page</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-not-exported">
 						<a href="_actions_.html#showmendixactionerror" class="tsd-kind-icon">show<wbr>Mendix<wbr>Action<wbr>Error</a>
 					</li>
 				</ul>
@@ -404,57 +424,16 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
 				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>

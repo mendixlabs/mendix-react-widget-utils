@@ -1,5 +1,8 @@
-[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![npm version](https://badge.fury.io/js/%40jeltemx%2Fmendix-react-widget-utils.svg)](https://badge.fury.io/js/%40jeltemx%2Fmendix-react-widget-utils)
+[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/%40jeltemx%2Fmendix-react-widget-utils.svg)](https://www.npmjs.com/package/@jeltemx/mendix-react-widget-utils)
+[![Dependencies](https://david-dm.org/JelteMX/mendix-react-widget-utils.svg)](https://david-dm.org/JelteMX/mendix-react-widget-utils)
+[![DevDependencies](https://david-dm.org/JelteMX/mendix-react-widget-utils/dev-status.svg)](https://david-dm.org/JelteMX/mendix-react-widget-utils?type=dev)
+[![GitHub issues](https://img.shields.io/github/issues/JelteMX/mendix-react-widget-utils)](https://github.com/JelteMX/mendix-react-widget-utils/issues)
 
 # Mendix (React) Widget Utils
 

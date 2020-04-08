@@ -127,6 +127,28 @@ export const fetchAttr = <T>(obj: mendix.lib.MxObject, attr: string): Promise<T>
     });
 
 /**
+ * Get a formatted value from an attribute of a Mendix Object
+ *
+ * @name getFormattedValue
+ * @category Objects
+ * @param obj Mendix Object
+ * @param attr Attribute
+ */
+
+export const getFormattedValue = (obj: mendix.lib.MxObject, attr: string): string | number | boolean => {
+    const type = obj.getAttributeType(attr);
+    const ret = obj.get(attr);
+    if (type === "Enum") {
+        return obj.getEnumCaption(attr, ret as string);
+    } else if (type === "Boolean") {
+        return ret ? "True" : "False";
+    } else if (type === "Date" || type === "DateTime") {
+        return window.mx.parser.formatValue(ret, type.toLowerCase());
+    }
+    return ret.valueOf ? ret.valueOf() : ret;
+};
+
+/**
  * Get context for a Mendix Object, used in actions
  *
  * @name getObjectContext
@@ -145,6 +167,7 @@ export const getObjectContext = (obj: mendix.lib.MxObject): mendix.lib.MxContext
  * @name getObjectContextFromObjects
  * @param objs Mendix Objects array
  */
+// tslint:disable-next-line:array-type
 export const getObjectContextFromObjects = (...objs: Array<mendix.lib.MxObject | undefined>): mendix.lib.MxContext => {
     const context = new mendix.lib.MxContext();
     let contextCreated = false;
