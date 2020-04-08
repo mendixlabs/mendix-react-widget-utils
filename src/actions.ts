@@ -1,6 +1,16 @@
 import { ActionType, INanoflow, IOpenPageAction, IAction, ActionReturnType } from "./interfaces";
 
-const showMendixActionError = (show = false, type: ActionType, actionName: any, msg: string) => {
+/**
+ * Used internally to show a Mendix error when an action has not executed properly
+ *
+ * @name showMendixActionError
+ * @category Actions
+ * @param show Show an error or not
+ * @param type ActionType
+ * @param actionName This could be anything within the action, for example the microflow/nanoflow
+ * @param msg Error message
+ */
+export const showMendixActionError = (show = false, type: ActionType, actionName: any, msg: string) => {
     if (!show) {
         return;
     }

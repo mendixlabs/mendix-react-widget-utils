@@ -34,7 +34,9 @@ export interface IOpenPageAction {
 }
 
 /**
- * Action interface used by the executeAction method in Widgetbase
+ * Action interface used by executeAction
+ *
+ * Note: An Action should always only have 1 type: microflow/nanoflow/page. You cannot execute multiple actions
  */
 export interface IAction {
     microflow?: string;

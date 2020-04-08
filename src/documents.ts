@@ -2,6 +2,7 @@
  * Save a Mendix file document
  *
  * @name saveDocument
+ * @category FileDocument
  * @param name File name
  * @param file Blob
  * @param obj Mendix Object (FileDocument)

@@ -1,6 +1,6 @@
 {
   "name": "@jeltemx/mendix-react-widget-utils",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Mendix Widget utils to make widget development a little easier",
   "license": "MIT",
   "repository": {
@@ -35,11 +35,12 @@
     "prebuild": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
     "build:ts": "tsc",
     "build": "npm run build:ts && npm run typedoc && npm run assets",
+    "watch-build": "npm run build:ts && npm run typedoc",
     "typedoc": "node ./node_modules/.bin/typedoc ./src/",
     "assets": "cp -r ./assets/* ./docs/ && cp -r ./assets/.nojekyll ./docs/",
     "test": "jest",
     "coverage": "jest --coverage",
-    "watch": "npm run build -- --watch",
+    "watch": "npm-watch watch-build",
     "watch:test": "jest --watch"
   },
   "dependencies": {
@@ -59,6 +60,7 @@
     "jest": "^25.3.0",
     "jsdoc-babel": "^0.5.0",
     "mendix-client": "^7.15.8",
+    "npm-watch": "^0.6.0",
     "prettier": "^2.0.4",
     "rimraf": "^3.0.2",
     "ts-jest": "^25.3.1",
@@ -73,5 +75,15 @@
   },
   "jest": {
     "preset": "ts-jest"
+  },
+  "watch": {
+    "watch-build": {
+      "patterns": ["src"],
+      "extensions": "ts",
+      "quiet": false,
+      "legacyWatch": true,
+      "delay": 2500,
+      "runOnChangeOnly": false
+    }
   }
 }

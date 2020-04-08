@@ -2,6 +2,7 @@
  * Is Entity persistent or not
  *
  * @name entityIsPersistable
+ * @category Entity
  * @param entity Entity name
  */
 export const entityIsPersistable = (entity: string): boolean => {
@@ -12,6 +13,7 @@ export const entityIsPersistable = (entity: string): boolean => {
  * Is Entity an instance of a System.Image or not
  *
  * @name entityIsImage
+ * @category Entity
  * @param entity Entity name
  */
 export const entityIsImage = (entity: string): boolean => {
@@ -22,6 +24,7 @@ export const entityIsImage = (entity: string): boolean => {
  * Is Entity an instance of a System.FileDocument or not
  *
  * @name entityIsFileDocument
+ * @category Entity
  * @param entity Entity name
  */
 export const entityIsFileDocument = (entity: string): boolean => {

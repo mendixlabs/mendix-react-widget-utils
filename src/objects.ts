@@ -1,5 +1,6 @@
 import { entityIsPersistable } from "./entities";
 
+/** Filter options for mx.data.get. See https://apidocs.mendix.com/8/client/mx.data.html#.get */
 export interface IFilterOptions {
     id?: string;
     attributes?: string[];
@@ -10,18 +11,23 @@ export interface IFilterOptions {
     references?: mx.ReferencesSpec;
 }
 
+/** Common options for mx.data.get. See https://apidocs.mendix.com/8/client/mx.data.html#.get */
 interface IGetOptions {
     noCache?: boolean;
     count?: boolean;
     path?: string;
+    /** This property is used in the widget utils to do Promise.resolve */
     callback: (objects: mendix.lib.MxObject[]) => void;
+    /** This property is used in the widget utils to do Promise.reject */
     error?: (error: Error) => void;
     filter?: IFilterOptions;
 }
 
+/** Specific options form a mx.data.get with XPath */
 interface IGetXPathOptions extends IGetOptions {
     xpath: string;
 }
+/** Specific options form a mx.data.get with Guids */
 interface IGetGuidsOptions extends IGetOptions {
     guids: string[];
 }
@@ -165,6 +171,7 @@ export const getObjectContext = (obj: mendix.lib.MxObject): mendix.lib.MxContext
  * Get context from the first Mendix Object encountered
  *
  * @name getObjectContextFromObjects
+ * @category Objects
  * @param objs Mendix Objects array
  */
 // tslint:disable-next-line:array-type
@@ -184,6 +191,7 @@ export const getObjectContextFromObjects = (...objs: Array<mendix.lib.MxObject |
  * Get context from a guid and entityname
  *
  * @name getObjectContextFromId
+ * @category Objects
  * @param guid Mendix Object guid
  * @param entityName Mendix Entity name
  */
@@ -199,6 +207,7 @@ export const getObjectContextFromId = (guid: string, entityName: string): mendix
  * Return whether or not a Mendix object is persistable or not
  *
  * @name objectIsPersistable
+ * @category Objects
  * @param obj Mendix object
  */
 export const objectIsPersistable = (obj: mendix.lib.MxObject): boolean => {

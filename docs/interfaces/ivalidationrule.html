@@ -40,8 +40,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -66,6 +64,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Validation rule</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -81,9 +86,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ivalidationrule.html#cat" class="tsd-kind-icon">cat</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ivalidationrule.html#con" class="tsd-kind-icon">con</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ivalidationrule.html#msg" class="tsd-kind-icon">msg</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ivalidationrule.html#category" class="tsd-kind-icon">category</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ivalidationrule.html#condition" class="tsd-kind-icon">condition</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ivalidationrule.html#message" class="tsd-kind-icon">message</a></li>
 							</ul>
 						</section>
 					</div>
@@ -92,34 +97,49 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="cat" class="tsd-anchor"></a>
-					<h3>cat</h3>
-					<div class="tsd-signature tsd-kind-icon">cat<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="category" class="tsd-anchor"></a>
+					<h3>category</h3>
+					<div class="tsd-signature tsd-kind-icon">category<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/validation.ts#L7">validation.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/validation.ts#L12">validation.ts:12</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>To display ValidationMessage objects correctly, a category string is prepended before the message</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="con" class="tsd-anchor"></a>
-					<h3>con</h3>
-					<div class="tsd-signature tsd-kind-icon">con<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="condition" class="tsd-anchor"></a>
+					<h3>condition</h3>
+					<div class="tsd-signature tsd-kind-icon">condition<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/validation.ts#L6">validation.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/validation.ts#L10">validation.ts:10</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Used to determine whether or not it should result in a ValidationMessage</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="msg" class="tsd-anchor"></a>
-					<h3>msg</h3>
-					<div class="tsd-signature tsd-kind-icon">msg<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="message" class="tsd-anchor"></a>
+					<h3>message</h3>
+					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/validation.ts#L8">validation.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/validation.ts#L14">validation.ts:14</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Actual message for a ValidationMessage</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -166,13 +186,13 @@
 						<a href="ivalidationrule.html" class="tsd-kind-icon">IValidation<wbr>Rule</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ivalidationrule.html#cat" class="tsd-kind-icon">cat</a>
+								<a href="ivalidationrule.html#category" class="tsd-kind-icon">category</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ivalidationrule.html#con" class="tsd-kind-icon">con</a>
+								<a href="ivalidationrule.html#condition" class="tsd-kind-icon">condition</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ivalidationrule.html#msg" class="tsd-kind-icon">msg</a>
+								<a href="ivalidationrule.html#message" class="tsd-kind-icon">message</a>
 							</li>
 						</ul>
 					</li>

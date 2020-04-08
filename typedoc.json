@@ -2,6 +2,7 @@
     "out": "docs",
     "theme": "default",
     "stripInternal": "true",
+    "excludeNotExported": true,
     "preserveConstEnums": "true",
     "target": "ES6",
     "name": "Mendix React Widget Utils",
