@@ -16,6 +16,10 @@ import { createObject } from "@jeltemx/mendix-react-widget-utils";
 const mendixObject = await createObject("MyFirstModule.Entity");
 ```
 
+## Documentation
+
+> Documentation can be found [here](https://jeltemx.github.io/mendix-react-widget-utils/)
+
 ## License
 
 MIT
