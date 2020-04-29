@@ -99,7 +99,9 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="globals.html#executeaction" class="tsd-kind-icon">execute<wbr>Action</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#executemicroflow" class="tsd-kind-icon">execute<wbr>Microflow</a></li>
-								<li class="tsd-kind-function"><a href="globals.html#executenanoflow" class="tsd-kind-icon">execute<wbr>Nano<wbr>Flow</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#executenanoflow" class="tsd-kind-icon">execute<wbr>Nanoflow</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#firemicroflow" class="tsd-kind-icon">fire<wbr>Microflow</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#firenanoflow" class="tsd-kind-icon">fire<wbr>Nanoflow</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#openpage" class="tsd-kind-icon">open<wbr>Page</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#showmendixactionerror" class="tsd-kind-icon">show<wbr>Mendix<wbr>Action<wbr>Error</a></li>
 							</ul>
@@ -133,6 +135,12 @@
 								<li class="tsd-kind-function"><a href="globals.html#getobjects" class="tsd-kind-icon">get<wbr>Objects</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#objectispersistable" class="tsd-kind-icon">object<wbr>IsPersistable</a></li>
 							</ul>
+							<h3>User Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="globals.html#getuserid" class="tsd-kind-icon">get<wbr>User<wbr>Id</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#getuserobject" class="tsd-kind-icon">get<wbr>User<wbr>Object</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#isguest" class="tsd-kind-icon">is<wbr>Guest</a></li>
+							</ul>
 							<h3>Validation Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="globals.html#getvalidationmessagesfromrules" class="tsd-kind-icon">get<wbr>Validation<wbr>Messages<wbr>From<wbr>Rules</a></li>
@@ -153,7 +161,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="actionreturntype" class="tsd-anchor"></a>
 					<h3>Action<wbr>Return<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">Action<wbr>Return<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MxObject</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MxObject</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">Action<wbr>Return<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MxObject</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MxObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/interfaces.ts#L5">interfaces.ts:5</a></li>
@@ -197,13 +205,13 @@
 					<a name="executeaction" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> execute<wbr>Action</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">execute<wbr>Action<span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><a href="interfaces/iaction.html" class="tsd-signature-type">IAction</a>, showError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MxContext</span>, mxform<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">_FormBase</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MxObject</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MxObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">execute<wbr>Action<span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><a href="interfaces/iaction.html" class="tsd-signature-type">IAction</a>, showError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MxContext</span>, mxform<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">_FormBase</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#actionreturntype" class="tsd-signature-type">ActionReturnType</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/actions.ts#L136">actions.ts:136</a></li>
+									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/actions.ts#L170">actions.ts:170</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -251,7 +259,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MxObject</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MxObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#actionreturntype" class="tsd-signature-type">ActionReturnType</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -319,15 +327,15 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="executenanoflow" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> execute<wbr>Nano<wbr>Flow</h3>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> execute<wbr>Nanoflow</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">execute<wbr>Nano<wbr>Flow<span class="tsd-signature-symbol">(</span>nanoflow<span class="tsd-signature-symbol">: </span><a href="interfaces/inanoflow.html" class="tsd-signature-type">INanoflow</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MxContext</span>, origin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">_FormBase</span>, showError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#actionreturntype" class="tsd-signature-type">ActionReturnType</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">execute<wbr>Nanoflow<span class="tsd-signature-symbol">(</span>nanoflow<span class="tsd-signature-symbol">: </span><a href="interfaces/inanoflow.html" class="tsd-signature-type">INanoflow</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MxContext</span>, origin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">_FormBase</span>, showError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#actionreturntype" class="tsd-signature-type">ActionReturnType</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/actions.ts#L69">actions.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/actions.ts#L86">actions.ts:86</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -380,6 +388,130 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="firemicroflow" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> fire<wbr>Microflow</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">fire<wbr>Microflow<span class="tsd-signature-symbol">(</span>microflow<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MxContext</span>, origin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">_FormBase</span>, showError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/actions.ts#L69">actions.ts:69</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fire and forget a microflow, as a Promise</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>name</dt>
+									<dd><p>fireMicroflow</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>microflow: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Microflow name</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">MxContext</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Context in which the microflow is ececuted. This is populated by the Mendix Object that is passed down to the microflow</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>origin: <span class="tsd-signature-type">_FormBase</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The mxform that is part of the widget that executes the microflow</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showError: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Show a Mendix error or not</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="firenanoflow" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> fire<wbr>Nanoflow</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">fire<wbr>Nanoflow<span class="tsd-signature-symbol">(</span>nanoflow<span class="tsd-signature-symbol">: </span><a href="interfaces/inanoflow.html" class="tsd-signature-type">INanoflow</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MxContext</span>, origin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">_FormBase</span>, showError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/actions.ts#L121">actions.ts:121</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fire and forget a nanoflow, as a Promise</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>name</dt>
+									<dd><p>fireNanoflow</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>nanoflow: <a href="interfaces/inanoflow.html" class="tsd-signature-type">INanoflow</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Nanoflow</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">MxContext</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Context in which the microflow is ececuted. This is populated by the Mendix Object that is passed down to the microflow</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>origin: <span class="tsd-signature-type">_FormBase</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The mxform that is part of the widget that executes the microflow</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> showError: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Show a Mendix error or not</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="openpage" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> open<wbr>Page</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -389,7 +521,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/actions.ts#L103">actions.ts:103</a></li>
+									<li>Defined in <a href="https://github.com/JelteMX/mendix-react-widget-utils/blob/master/src/actions.ts#L137">actions.ts:137</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1259,6 +1391,90 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>User Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="getuserid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>User<wbr>Id</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>User<wbr>Id<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in user.ts:17</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a User ID</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>name</dt>
+									<dd><p>getUserId</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="getuserobject" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>User<wbr>Object</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>User<wbr>Object<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MxObject</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in user.ts:25</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get User object (if user is logged in and known)</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>name</dt>
+									<dd><p>getUserObject</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MxObject</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="isguest" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Guest</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Guest<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in user.ts:9</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns whether or not a user is logged in</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>name</dt>
+									<dd><p>isGuest</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Validation Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="getvalidationmessagesfromrules" class="tsd-anchor"></a>
@@ -1464,13 +1680,19 @@
 						<a href="globals.html#executemicroflow" class="tsd-kind-icon">execute<wbr>Microflow</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#executenanoflow" class="tsd-kind-icon">execute<wbr>Nano<wbr>Flow</a>
+						<a href="globals.html#executenanoflow" class="tsd-kind-icon">execute<wbr>Nanoflow</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#fetchattr" class="tsd-kind-icon">fetch<wbr>Attr</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#fetchbyxpath" class="tsd-kind-icon">fetch<wbr>ByXpath</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#firemicroflow" class="tsd-kind-icon">fire<wbr>Microflow</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#firenanoflow" class="tsd-kind-icon">fire<wbr>Nanoflow</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getformattedvalue" class="tsd-kind-icon">get<wbr>Formatted<wbr>Value</a>
@@ -1491,7 +1713,16 @@
 						<a href="globals.html#getobjects" class="tsd-kind-icon">get<wbr>Objects</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="globals.html#getuserid" class="tsd-kind-icon">get<wbr>User<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getuserobject" class="tsd-kind-icon">get<wbr>User<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="globals.html#getvalidationmessagesfromrules" class="tsd-kind-icon">get<wbr>Validation<wbr>Messages<wbr>From<wbr>Rules</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#isguest" class="tsd-kind-icon">is<wbr>Guest</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#objectispersistable" class="tsd-kind-icon">object<wbr>IsPersistable</a>

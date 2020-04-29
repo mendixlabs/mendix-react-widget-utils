@@ -57,6 +57,23 @@ export const executeMicroflow = (
     });
 
 /**
+ * Fire and forget a microflow, as a Promise
+ *
+ * @name fireMicroflow
+ * @category Actions
+ * @param microflow Microflow name
+ * @param context Context in which the microflow is ececuted. This is populated by the Mendix Object that is passed down to the microflow
+ * @param origin The mxform that is part of the widget that executes the microflow
+ * @param showError Show a Mendix error or not
+ */
+export const fireMicroflow = (
+    microflow: string,
+    context: mendix.lib.MxContext,
+    origin: mxui.lib.form._FormBase,
+    showError = false
+): Promise<void> => executeMicroflow(microflow, context, origin, showError) as Promise<void>;
+
+/**
  * Execute a Nanoflow as Promise
  *
  * @name executeNanoFlow
@@ -66,7 +83,7 @@ export const executeMicroflow = (
  * @param origin The mxform that is part of the widget that executes the microflow
  * @param showError Show a Mendix error or not
  */
-export const executeNanoFlow = (
+export const executeNanoflow = (
     nanoflow: INanoflow,
     context: mendix.lib.MxContext,
     origin: mxui.lib.form._FormBase,
@@ -90,6 +107,23 @@ export const executeNanoFlow = (
         }
     });
 };
+
+/**
+ * Fire and forget a nanoflow, as a Promise
+ *
+ * @name fireNanoflow
+ * @category Actions
+ * @param nanoflow Nanoflow
+ * @param context Context in which the microflow is ececuted. This is populated by the Mendix Object that is passed down to the microflow
+ * @param origin The mxform that is part of the widget that executes the microflow
+ * @param showError Show a Mendix error or not
+ */
+export const fireNanoflow = (
+    nanoflow: INanoflow,
+    context: mendix.lib.MxContext,
+    origin: mxui.lib.form._FormBase,
+    showError = false
+): Promise<void> => executeNanoflow(nanoflow, context, origin, showError) as Promise<void>;
 
 /**
  * Open a page
@@ -138,11 +172,11 @@ export const executeAction = (
     showError = false,
     context: mendix.lib.MxContext,
     mxform: mxui.lib.form._FormBase
-): Promise<string | number | boolean | mendix.lib.MxObject | mendix.lib.MxObject[] | void> => {
+): Promise<ActionReturnType> => {
     if (action.microflow) {
         return executeMicroflow(action.microflow, context, mxform, showError);
     } else if (action.nanoflow) {
-        return executeNanoFlow(action.nanoflow, context, mxform, showError);
+        return executeNanoflow(action.nanoflow, context, mxform, showError);
     } else if (action.page) {
         return openPage(action.page, context, showError);
     }

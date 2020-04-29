@@ -2,7 +2,7 @@ import { CSSProperties } from "react";
 
 export type ActionType = "microflow" | "nanoflow" | "open page";
 export type OpenPageAs = "content" | "popup" | "modal" | "node";
-export type ActionReturnType = string | number | boolean | mendix.lib.MxObject | mendix.lib.MxObject[];
+export type ActionReturnType = string | number | boolean | mendix.lib.MxObject | mendix.lib.MxObject[] | void | null;
 
 /**
  * Common properties that are set by the Mendix Runtime in React widgets

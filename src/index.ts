@@ -5,3 +5,4 @@ export * from "./entities";
 export * from "./interfaces";
 export * from "./objects";
 export * from "./validation";
+export * from "./user";
