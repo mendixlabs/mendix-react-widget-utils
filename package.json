@@ -44,9 +44,11 @@
     "watch:test": "jest --watch"
   },
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
     "uuid": "^7.0.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -78,7 +80,9 @@
   },
   "watch": {
     "watch-build": {
-      "patterns": ["src"],
+      "patterns": [
+        "src"
+      ],
       "extensions": "ts",
       "quiet": false,
       "legacyWatch": true,
