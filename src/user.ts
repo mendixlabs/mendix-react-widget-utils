@@ -6,7 +6,7 @@ import { getObject } from "./objects";
  * @name isGuest
  * @category User
  */
-export const isGuest = () => window.mx.session.isGuest && window.mx.session.isGuest();
+export const isGuest = () => (window.mx.session.isGuest ? window.mx.session.isGuest() : null);
 
 /**
  * Returns a User ID
@@ -14,7 +14,7 @@ export const isGuest = () => window.mx.session.isGuest && window.mx.session.isGu
  * @name getUserId
  * @category User
  */
-export const getUserId = () => window.mx.session.getUserId && window.mx.session.getUserId();
+export const getUserId = () => (window.mx.session.getUserId ? window.mx.session.getUserId() : null);
 
 /**
  * Get User object (if user is logged in and known)
@@ -22,8 +22,7 @@ export const getUserId = () => window.mx.session.getUserId && window.mx.session.
  * @name getUserObject
  * @category User
  */
-export const getUserObject = async () => {
+export const getUserObject = () => {
     const userID = getUserId();
-    const user = userID ? await getObject(userID) : null;
-    return user;
+    return userID ? getObject(userID) : Promise.resolve(null);
 };

@@ -32,6 +32,8 @@ interface IGetGuidsOptions extends IGetOptions {
     guids: string[];
 }
 
+export type ReferencePart = "referenceAttr" | "entity";
+
 /**
  * Create a Mendix Object
  *
@@ -251,4 +253,51 @@ export const fetchByXpath = (
 
         window.mx.data.get(getOptions);
     });
+};
+
+/**
+ * Get the part of a reference. This can either be the attribute or the entity
+ *
+ * @name getReferencePart
+ * @category Objects
+ * @param reference Reference path
+ * @param part attribute or entity
+ */
+export const getReferencePart = (reference = "", part: ReferencePart = "referenceAttr"): string => {
+    const partNum = part === "referenceAttr" ? 0 : 1;
+    const parts = reference.split("/");
+    if (reference === "" || parts.length < partNum + 1) {
+        return "";
+    }
+    return parts[partNum];
+};
+
+/**
+ * Fetch attributes over a reference. This is typical in a custom widget with the following property values:
+ *
+ * ```<... type="attribute" isPath="optional" pathType="reference">```
+ *
+ * It requires the Mendix object and reference path. The path is optional. If it doesn't detect a path, it will just return the attribute value
+ *
+ * @name fetchAttributeOverPath
+ * @category Objects
+ * @param obj Mendix Object
+ * @param attr reference path
+ * @returns
+ */
+export const fetchAttributeOverPath = async <T>(obj: mendix.lib.MxObject, attr = ""): Promise<T | null> => {
+    if (attr.indexOf("/") === -1) {
+        return fetchAttr(obj, attr);
+    }
+    const parts = attr.split("/");
+    if (obj.isObjectReference(parts[0]) && parts.length >= 3) {
+        const ref = obj.getReference(parts[0]);
+        if (ref) {
+            const refObj = await getObject(ref);
+            const remaining = parts.slice(2).join("/");
+            return refObj ? fetchAttributeOverPath(refObj, remaining) : null;
+        }
+    }
+
+    return null;
 };
