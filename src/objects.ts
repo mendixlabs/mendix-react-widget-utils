@@ -211,7 +211,7 @@ export const getObjectContextFromId = (guid: string, entityName: string): mendix
  * @category Objects
  * @param obj Mendix object
  */
-export const objectIsPersistable = (obj: mendix.lib.MxObject): boolean => {
+export const objectIsPersistable = (obj: mendix.lib.MxObject): boolean | null => {
     const entity = obj.getEntity();
     return entityIsPersistable(entity);
 };

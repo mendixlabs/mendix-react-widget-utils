@@ -1,12 +1,18 @@
 /**
- * Is Entity persistent or not
+ * Is Entity persistent or not. Note that this is deprecated in Mendix 9
  *
  * @name entityIsPersistable
  * @category Entity
  * @param entity Entity name
  */
-export const entityIsPersistable = (entity: string): boolean => {
-    return window.mx.meta.getEntity(entity).isPersistable();
+export const entityIsPersistable = (entity: string): boolean | null => {
+    let returnValue = null;
+    try {
+        returnValue = window.mx.meta.getEntity(entity).isPersistable();
+    } catch (error) {
+        returnValue = null;
+    }
+    return returnValue;
 };
 
 /**
